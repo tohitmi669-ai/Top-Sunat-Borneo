@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Top Sunat Borneo Sepinggan - Klinik Sunat Modern di Balikpapan. Layanan 24 Jam, metode minim nyeri, dokter profesional, fasilitas ramah anak. Rating 5.0 Google Maps.">
+    <title>Top Sunat Borneo Sepinggan | Klinik Sunat Modern Balikpapan 24 Jam</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS (Animate On Scroll) CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand': {
+                            'dark': '#0B3D5C',
+                            'primary': '#1A7F9E',
+                            'light': '#D4F0F7',
+                            'lighter': '#EDF8FB',
+                        },
+                        'accent': '#00A896',
+                        'accent-light': '#B2DFDB',
+                        'warm': '#F5A623',
+                        'soft': '#F8FAFC',
+                        'charcoal': '#2D3748',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif'],
+                    },
+                    animation: {
+                        'bounce-slow': 'bounce 3s infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'wiggle': 'wiggle 1s ease-in-out infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                        'float-slow': 'floatSlow 4s ease-in-out infinite',
+                        'slide-up': 'slideUp 0.4s ease-out',
+                        'wave-hand': 'waveHand 1.5s ease-in-out infinite',
+                        'astronaut-float': 'astronautFloat 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        wiggle: {
+                            '0%, 100%': { transform: 'rotate(-3deg)' },
+                            '50%': { transform: 'rotate(3deg)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        floatSlow: {
+                            '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+                            '25%': { transform: 'translateY(-15px) rotate(-2deg)' },
+                            '75%': { transform: 'translateY(-25px) rotate(2deg)' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        waveHand: {
+                            '0%, 100%': { transform: 'rotate(0deg)' },
+                            '25%': { transform: 'rotate(-25deg)' },
+                            '50%': { transform: 'rotate(0deg)' },
+                            '75%': { transform: 'rotate(25deg)' },
+                        },
+                        astronautFloat: {
+                            '0%, 100%': { transform: 'translateY(0px) translateX(0px)' },
+                            '25%': { transform: 'translateY(-30px) translateX(10px)' },
+                            '50%': { transform: 'translateY(-15px) translateX(-5px)' },
+                            '75%': { transform: 'translateY(-35px) translateX(-10px)' },
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Global */
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; color: #2D3748; }
+        
+        /* Navbar */
+        #navbar { transition: all 0.35s ease; }
+        .navbar-transparent { background: transparent; }
+        .navbar-scrolled { background: rgba(11, 61, 92, 0.97); backdrop-filter: blur(12px); box-shadow: 0 4px 25px rgba(0,0,0,0.15); }
+        .nav-link { position: relative; transition: color 0.3s; }
+        .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: #00A896; transition: width 0.3s; }
+        .nav-link:hover::after { width: 100%; }
+        
+        /* Hero Slider */
+        .hero-slide { background-size: cover; background-position: center; position: relative; }
+        .hero-slide::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(11,61,92,0.88) 0%, rgba(0,168,150,0.65) 100%); }
+        .swiper-pagination-bullet { background: white; opacity: 0.6; width: 12px; height: 12px; }
+        .swiper-pagination-bullet-active { background: #00A896; opacity: 1; transform: scale(1.2); }
+        .swiper-button-next, .swiper-button-prev { color: white !important; }
+        
+        /* Counter */
+        .counter-value { font-variant-numeric: tabular-nums; }
+        
+        /* Cards */
+        .card-hover { transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 35px -12px rgba(0,0,0,0.2); }
+        
+        /* Floating WA */
+        .wa-float { animation: waPulse 1.8s infinite; z-index: 100; transition: transform 0.3s; }
+        .wa-float:hover { transform: scale(1.12); animation: none; }
+        @keyframes waPulse { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { box-shadow: 0 0 0 22px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+        
+        /* CTA Button Shine */
+        .btn-shine { position: relative; overflow: hidden; }
+        .btn-shine::after { content: ''; position: absolute; top: -60%; left: -70%; width: 35%; height: 220%; background: rgba(255,255,255,0.25); transform: rotate(25deg); transition: left 0.6s; }
+        .btn-shine:hover::after { left: 130%; }
+        
+        /* Article Card */
+        .article-img-wrapper { overflow: hidden; }
+        .article-img-wrapper img { transition: transform 0.6s ease; }
+        .article-card:hover .article-img-wrapper img { transform: scale(1.06); }
+        
+        /* Gallery */
+        .gallery-img-wrapper { overflow: hidden; border-radius: 1rem; }
+        .gallery-img-wrapper img { transition: transform 0.5s ease; }
+        .gallery-img-wrapper:hover img { transform: scale(1.1); }
+        
+        /* Modal Popup */
+        .modal-overlay { 
+            background: rgba(0,0,0,0.7); 
+            backdrop-filter: blur(5px);
+            opacity: 0; 
+            visibility: hidden; 
+            transition: all 0.3s ease; 
+        }
+        .modal-overlay.active { opacity: 1; visibility: visible; }
+        .modal-content { 
+            transform: scale(0.9) translateY(20px); 
+            opacity: 0; 
+            transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+        }
+        .modal-overlay.active .modal-content { transform: scale(1) translateY(0); opacity: 1; }
+        
+        /* Instagram Feed */
+        .insta-card { transition: all 0.35s ease; }
+        .insta-card:hover { transform: translateY(-6px); box-shadow: 0 20px 35px -12px rgba(0,0,0,0.2); }
+        
+        /* Testimonial card */
+        .testimonial-card { transition: all 0.3s ease; }
+        .testimonial-card:hover { transform: scale(1.03); box-shadow: 0 15px 30px -10px rgba(0,0,0,0.3); }
+        
+        /* Mobile Menu */
+        #mobile-menu { transition: all 0.3s ease; }
+        
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #EDF2F7; }
+        ::-webkit-scrollbar-thumb { background: #1A7F9E; border-radius: 8px; }
+        
+        /* Gallery Swiper */
+        .gallerySwiper .swiper-pagination-bullet { background: #00A896; }
+        .gallerySwiper .swiper-button-next, .gallerySwiper .swiper-button-prev { color: #00A896 !important; }
+        
+        /* Animasi untuk gambar astronot */
+        .astronaut-gif {
+            animation: astronautFloat 4s ease-in-out infinite;
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
+        }
+        
+        @keyframes astronautFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            25% { transform: translateY(-15px) rotate(-5deg); }
+            75% { transform: translateY(-25px) rotate(5deg); }
+        }
+    </style>
+</head>
+<body class="bg-white overflow-x-hidden">
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <header id="navbar" class="fixed top-0 left-0 w-full z-50 navbar-transparent py-3 md:py-4">
+        <div class="container mx-auto px-5 md:px-8 flex justify-between items-center">
+            <!-- Logo dengan gambar dari link -->
+            <a href="#home" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 md:w-14 md:h-14 rounded-xl overflow-hidden shadow-md transition group-hover:shadow-lg flex items-center justify-center bg-white p-1">
+                    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgJfgru0kMFAokqOkSHCE69txWpwcsYmIvLztiKQg36xUkcZCDYOfsFxjubQ2EN2Zdb_XMsWlWPAiGs7QJUQNP9XtEneJ29SdcHEXQ_IwrH31fxsx1il_1iq-czZ_hkEWekQLSSouDiru2eYvJ0bOqpWBposRxvYZhxtjrqpHMElgCJ79P8kQ8QKuWs4Rrp" 
+                         alt="Top Sunat Borneo Logo" 
+                         class="w-full h-full object-contain">
+                </div>
+                <div class="leading-tight">
+                    <p class="text-white font-bold text-base md:text-lg">Top Sunat Borneo</p>
+                    <p class="text-accent-light text-xs tracking-wide">Sepinggan • Balikpapan</p>
+                </div>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center space-x-7 text-white font-medium text-sm">
+                <a href="#home" class="nav-link hover:text-accent-light transition">Beranda</a>
+                <a href="#tentang" class="nav-link hover:text-accent-light transition">Tentang</a>
+                <a href="#metode" class="nav-link hover:text-accent-light transition">Metode Sunat</a>
+                <a href="#layanan" class="nav-link hover:text-accent-light transition">Layanan</a>
+                <a href="#galeri" class="nav-link hover:text-accent-light transition">Galeri</a>
+                <a href="#artikel" class="nav-link hover:text-accent-light transition">Artikel</a>
+                <a href="#kontak" class="bg-accent hover:bg-accent/90 text-white px-6 py-2.5 rounded-full transition font-bold shadow-lg btn-shine">Hubungi Kami</a>
+            </nav>
+            
+            <!-- Mobile Toggle -->
+            <button id="menu-toggle" class="lg:hidden text-white text-2xl p-2" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden mx-5 mt-3 bg-white/98 backdrop-blur-xl rounded-2xl shadow-2xl overflow-hidden">
+            <nav class="flex flex-col p-5 space-y-2">
+                <a href="#home" class="block py-3 px-4 rounded-xl hover:bg-brand-lighter text-charcoal font-medium transition">🏠 Beranda</a>
+                <a href="#tentang" class="block py-3 px-4 rounded-xl hover:bg-brand-lighter text-charcoal font-medium transition">ℹ️ Tentang</a>
+                <a href="#metode" class="block py-3 px-4 rounded-xl hover:bg-brand-lighter text-charcoal font-medium transition">🔧 Metode Sunat</a>
+                <a href="#layanan" class="block py-3 px-4 rounded-xl hover:bg-brand-lighter text-charcoal font-medium transition">👶 Layanan</a>
+                <a href="#galeri" class="block py-3 px-4 rounded-xl hover:bg-brand-lighter text-charcoal font-medium transition">🖼️ Galeri</a>
+                <a href="#artikel" class="block py-3 px-4 rounded-xl hover:bg-brand-lighter text-charcoal font-medium transition">📝 Artikel</a>
+                <a href="#kontak" class="block py-3 px-4 rounded-xl bg-accent text-white text-center font-bold transition mt-2">📞 Hubungi Kami</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ==================== HERO SLIDER ==================== -->
+    <section id="home">
+        <div class="swiper heroSwiper h-screen">
+            <div class="swiper-wrapper">
+                <!-- Slide 1: Pelopor -->
+                <div class="swiper-slide hero-slide" style="background-image: url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1400');">
+                    <div class="relative z-10 flex items-center h-full">
+                        <div class="container mx-auto px-5 text-white text-center md:text-left">
+                            <div class="max-w-3xl" data-swiper-parallax="-300">
+                                <span class="inline-block bg-accent text-white px-4 py-1.5 rounded-full text-sm font-bold mb-6 tracking-wide">⭐ Rating 5.0 • Google Maps</span>
+                                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
+                                    Klinik Sunat Modern<br>& <span class="text-warm">Ramah Anak</span> di Balikpapan
+                                </h1>
+                                <p class="text-lg md:text-xl text-brand-light/90 mb-8 max-w-xl">Pelopor khitan modern dengan metode minim nyeri. Melayani bayi, anak, dan dewasa — buka 24 jam penuh.</p>
+                                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                                    <a href="https://wa.me/6282254714341?text=Halo%20Top%20Sunat%20Borneo%2C%20saya%20ingin%20konsultasi%20gratis." target="_blank" class="btn-shine bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-lg inline-flex items-center gap-2 shadow-xl">
+                                        <i class="fab fa-whatsapp text-xl"></i> Konsultasi Gratis
+                                    </a>
+                                    <a href="#metode" class="border-2 border-white/50 hover:bg-white/20 text-white font-bold py-4 px-7 rounded-full text-lg inline-flex items-center gap-2 transition">
+                                        <i class="fas fa-arrow-down"></i> Lihat Metode
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 2: 24 Jam -->
+                <div class="swiper-slide hero-slide" style="background-image: url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=1400');">
+                    <div class="relative z-10 flex items-center h-full">
+                        <div class="container mx-auto px-5 text-white text-center md:text-left">
+                            <div class="max-w-3xl" data-swiper-parallax="-300">
+                                <span class="inline-block bg-green-500 text-white px-4 py-1.5 rounded-full text-sm font-bold mb-6 tracking-wide">🕐 Buka 24 Jam Nonstop</span>
+                                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
+                                    Konsultasi <span class="text-warm">Kapan Saja</span><br>24 Jam Penuh
+                                </h1>
+                                <p class="text-lg md:text-xl text-brand-light/90 mb-8 max-w-xl">Kami siap melayani konsultasi kapan pun Anda butuhkan. Senin sampai Minggu, tanpa libur.</p>
+                                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                                    <a href="https://wa.me/6282254714341?text=Halo%20Top%20Sunat%20Borneo%2C%20saya%20mau%20tanya-tanya." target="_blank" class="btn-shine bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-lg inline-flex items-center gap-2 shadow-xl">
+                                        <i class="fab fa-whatsapp text-xl"></i> Tanya Sekarang
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 3: Ramah Anak -->
+                <div class="swiper-slide hero-slide" style="background-image: url('https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=1400');">
+                    <div class="relative z-10 flex items-center h-full">
+                        <div class="container mx-auto px-5 text-white text-center md:text-left">
+                            <div class="max-w-3xl" data-swiper-parallax="-300">
+                                <span class="inline-block bg-blue-500 text-white px-4 py-1.5 rounded-full text-sm font-bold mb-6 tracking-wide">🧸 Fasilitas Ramah Anak</span>
+                                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
+                                    Tempat Nyaman<br><span class="text-warm">Bebas Trauma</span>
+                                </h1>
+                                <p class="text-lg md:text-xl text-brand-light/90 mb-8 max-w-xl">Dilengkapi area bermain, dekorasi ceria, dan TV. Si kecil tidak akan takut saat prosedur sunat.</p>
+                                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                                    <a href="#keunggulan" class="btn-shine bg-accent hover:bg-accent/90 text-white font-bold py-4 px-8 rounded-full text-lg inline-flex items-center gap-2 shadow-xl">
+                                        <i class="fas fa-star"></i> Keunggulan Kami
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next hidden md:flex"></div>
+            <div class="swiper-button-prev hidden md:flex"></div>
+        </div>
+    </section>
+
+    <!-- ==================== COUNTER STATS ==================== -->
+    <section class="py-14 bg-white border-b border-gray-100">
+        <div class="container mx-auto px-5">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center max-w-5xl mx-auto">
+                <div data-aos="fade-up" data-aos-delay="0">
+                    <div class="text-4xl md:text-5xl font-extrabold text-brand-primary counter-value">
+                        <span class="count" data-target="7">0</span>+
+                    </div>
+                    <p class="text-gray-500 mt-2 font-medium text-sm md:text-base">Tahun Pengalaman</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl md:text-5xl font-extrabold text-brand-primary counter-value">
+                        <span class="count" data-target="1500">0</span>+
+                    </div>
+                    <p class="text-gray-500 mt-2 font-medium text-sm md:text-base">Pasien Sunat</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex justify-center items-baseline gap-1">
+                        <span class="text-4xl md:text-5xl font-extrabold text-brand-primary">5.0</span>
+                        <span class="text-2xl md:text-3xl">⭐</span>
+                    </div>
+                    <p class="text-gray-500 mt-2 font-medium text-sm md:text-base">Google Review</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-4xl md:text-5xl font-extrabold text-brand-primary">24</div>
+                    <p class="text-gray-500 mt-2 font-medium text-sm md:text-base">Jam Layanan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT US + ASTRONAUT GIF ANIMATION ==================== -->
+    <section id="tentang" class="py-20 px-5 bg-brand-lighter/30 relative overflow-hidden">
+        <!-- Astronaut GIF Animation - Desktop -->
+        <div class="absolute bottom-0 left-10 md:left-20 z-10 w-40 h-40 md:w-56 md:h-56 hidden md:block astronaut-gif" data-aos="fade-up" data-aos-delay="300">
+            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgqA_a0N2HSrULaGT8Bu7GZ5ldYE37XoRqCNnyhPmTqpFgbDq00zneX8dqXAEcEm-WhYoncoXkAmNqyK4GkVSxbzImwtRQNKGbjAYaAs4tZcp5f4SAchP9wyeA26y6ALe7SCJ09_RKBQ4M8F6p0c6zihBLQKpVgB6S3Elcr6MAFAbLHSq2hB_0LiUxzEOMa" 
+                 alt="Astronaut Animation" 
+                 class="w-full h-full object-contain">
+        </div>
+        
+        <!-- Astronaut GIF Animation - Mobile -->
+        <div class="absolute bottom-0 right-10 z-10 w-28 h-28 md:hidden astronaut-gif" data-aos="fade-up" data-aos-delay="300">
+            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgqA_a0N2HSrULaGT8Bu7GZ5ldYE37XoRqCNnyhPmTqpFgbDq00zneX8dqXAEcEm-WhYoncoXkAmNqyK4GkVSxbzImwtRQNKGbjAYaAs4tZcp5f4SAchP9wyeA26y6ALe7SCJ09_RKBQ4M8F6p0c6zihBLQKpVgB6S3Elcr6MAFAbLHSq2hB_0LiUxzEOMa" 
+                 alt="Astronaut Animation" 
+                 class="w-full h-full object-contain">
+        </div>
+
+        <div class="container mx-auto max-w-4xl text-center relative z-20" data-aos="fade-up">
+            <span class="text-accent font-semibold uppercase tracking-wider text-sm">Tentang Kami</span>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-brand-dark mt-3">Top Sunat Borneo Sepinggan</h2>
+            <div class="w-16 h-1 bg-accent mx-auto mt-5 rounded-full"></div>
+            <p class="text-gray-600 mt-6 leading-relaxed text-base md:text-lg">
+                <strong>Top Sunat Borneo Sepinggan</strong> hadir sebagai klinik khitan modern terpercaya di Balikpapan. 
+                Berlokasi strategis di <strong>Ruko Borneo Paradiso, Sepinggan, Balikpapan Selatan</strong>, 
+                kami mengutamakan kenyamanan pasien dengan metode minim nyeri, fasilitas ramah anak, dan layanan konsultasi 24 jam. 
+                Didukung tenaga medis profesional, kami siap melayani sunat untuk bayi, anak-anak, hingga dewasa 
+                dengan hasil rapi dan penyembuhan optimal.
+            </p>
+        </div>
+    </section>
+
+    <!-- ==================== WHY CHOOSE US (KEUNGGULAN) ==================== -->
+    <section id="keunggulan" class="py-20 px-5 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-accent font-semibold uppercase tracking-wider text-sm">Mengapa Memilih Kami?</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-brand-dark mt-3">Keunggulan Top Sunat Borneo</h2>
+                <div class="w-16 h-1 bg-accent mx-auto mt-5 rounded-full"></div>
+                <p class="text-gray-500 mt-4">Kami memahami kecemasan setiap orang tua dan memberikan solusi terbaik</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <!-- Keunggulan 1 -->
+                <div class="card-hover bg-white border border-gray-100 rounded-2xl p-8 text-center shadow-md" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-16 h-16 bg-accent-light rounded-2xl flex items-center justify-center mx-auto mb-5">
+                        <i class="fas fa-user-md text-accent text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-dark mb-2">Dokter Profesional</h3>
+                    <p class="text-gray-500 text-sm">Tenaga medis berpengalaman & tersertifikasi, siap menangani sunat anak hingga dewasa dengan aman.</p>
+                </div>
+                
+                <!-- Keunggulan 2 -->
+                <div class="card-hover bg-white border border-gray-100 rounded-2xl p-8 text-center shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-accent-light rounded-2xl flex items-center justify-center mx-auto mb-5">
+                        <i class="fas fa-shield-heart text-accent text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-dark mb-2">Aman & Nyaman</h3>
+                    <p class="text-gray-500 text-sm">Metode minim nyeri, tanpa trauma, dengan anestesi lokal. Anak tetap tenang selama prosedur.</p>
+                </div>
+                
+                <!-- Keunggulan 3 -->
+                <div class="card-hover bg-white border border-gray-100 rounded-2xl p-8 text-center shadow-md" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-accent-light rounded-2xl flex items-center justify-center mx-auto mb-5">
+                        <i class="fas fa-gamepad text-accent text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-dark mb-2">Fasilitas Lengkap</h3>
+                    <p class="text-gray-500 text-sm">Dilengkapi TV, games, dan area bermain agar si kecil tidak tegang dan merasa nyaman.</p>
+                </div>
+                
+                <!-- Keunggulan 4 -->
+                <div class="card-hover bg-white border border-gray-100 rounded-2xl p-8 text-center shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-accent-light rounded-2xl flex items-center justify-center mx-auto mb-5">
+                        <i class="fas fa-clock text-accent text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-dark mb-2">Konsultasi 24 Jam</h3>
+                    <p class="text-gray-500 text-sm">Langsung dengan dokter via WhatsApp kapan saja. Sebelum & sesudah tindakan tetap terpantau.</p>
+                </div>
+                
+                <!-- Keunggulan 5 -->
+                <div class="card-hover bg-white border border-gray-100 rounded-2xl p-8 text-center shadow-md" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-accent-light rounded-2xl flex items-center justify-center mx-auto mb-5">
+                        <i class="fas fa-tag text-accent text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-dark mb-2">Harga Terjangkau</h3>
+                    <p class="text-gray-500 text-sm">Biaya sunat kompetitif dengan kualitas layanan premium. Tersedia berbagai paket pilihan.</p>
+                </div>
+                
+                <!-- Keunggulan 6 -->
+                <div class="card-hover bg-white border border-gray-100 rounded-2xl p-8 text-center shadow-md" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-accent-light rounded-2xl flex items-center justify-center mx-auto mb-5">
+                        <i class="fas fa-map-marker-alt text-accent text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-dark mb-2">Lokasi Strategis</h3>
+                    <p class="text-gray-500 text-sm">Ruko Borneo Paradiso, Balikpapan Selatan. Mudah diakses, parkir luas & aman.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== METODE SUNAT ==================== -->
+    <section id="metode" class="py-20 px-5 bg-brand-lighter/30 relative overflow-hidden">
+        <div class="container mx-auto relative z-20">
+            <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-accent font-semibold uppercase tracking-wider text-sm">Teknologi Modern</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-brand-dark mt-3">Metode Sunat Terkini</h2>
+                <div class="w-16 h-1 bg-accent mx-auto mt-5 rounded-full"></div>
+                <p class="text-gray-500 mt-4">Kami menguasai berbagai metode sunat modern untuk hasil terbaik</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-5 max-w-5xl mx-auto">
+                <!-- Metode 1 -->
+                <div class="card-hover bg-white rounded-2xl p-6 text-center shadow-md border border-gray-100" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-14 h-14 bg-gradient-to-br from-accent to-brand-primary rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-cut text-white text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-brand-dark">Konvensional</h3>
+                    <p class="text-gray-500 text-xs mt-2">Metode klasik yang aman</p>
+                    <button onclick="openModal('modal-konvensional')" class="inline-block mt-3 text-accent text-xs font-semibold hover:underline cursor-pointer">Selengkapnya →</button>
+                </div>
+                
+                <!-- Metode 2 -->
+                <div class="card-hover bg-white rounded-2xl p-6 text-center shadow-md border border-gray-100" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-gradient-to-br from-accent to-brand-primary rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-bolt text-white text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-brand-dark">Cauter</h3>
+                    <p class="text-gray-500 text-xs mt-2">Teknologi panas listrik</p>
+                    <button onclick="openModal('modal-cauter')" class="inline-block mt-3 text-accent text-xs font-semibold hover:underline cursor-pointer">Selengkapnya →</button>
+                </div>
+                
+                <!-- Metode 3 -->
+                <div class="card-hover bg-white rounded-2xl p-6 text-center shadow-md border border-gray-100" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-gradient-to-br from-accent to-brand-primary rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-compress text-white text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-brand-dark">Klem</h3>
+                    <p class="text-gray-500 text-xs mt-2">Tanpa jahitan, cepat</p>
+                    <button onclick="openModal('modal-klem')" class="inline-block mt-3 text-accent text-xs font-semibold hover:underline cursor-pointer">Selengkapnya →</button>
+                </div>
+                
+                <!-- Metode 4 -->
+                <div class="card-hover bg-white rounded-2xl p-6 text-center shadow-md border border-gray-100" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-gradient-to-br from-accent to-brand-primary rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-laser text-white text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-brand-dark">Laser</h3>
+                    <p class="text-gray-500 text-xs mt-2">Presisi tinggi, rapi</p>
+                    <button onclick="openModal('modal-laser')" class="inline-block mt-3 text-accent text-xs font-semibold hover:underline cursor-pointer">Selengkapnya →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== MODAL POPUPS UNTUK METODE ==================== -->
+    <!-- Modal Konvensional -->
+    <div id="modal-konvensional" class="modal-overlay fixed inset-0 z-[200] flex items-center justify-center p-5" onclick="closeModalOutside(event, 'modal-konvensional')">
+        <div class="modal-content bg-white rounded-2xl shadow-2xl max-w-lg w-full p-8 relative animate-slide-up" onclick="event.stopPropagation()">
+            <button onclick="closeModal('modal-konvensional')" class="absolute top-4 right-4 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition">
+                <i class="fas fa-times text-gray-500"></i>
+            </button>
+            <div class="text-center mb-6">
+                <div class="w-16 h-16 bg-gradient-to-br from-accent to-brand-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-cut text-white text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-extrabold text-brand-dark">Sunat Konvensional</h3>
+            </div>
+            <p class="text-gray-600 leading-relaxed mb-4">Metode sunat klasik yang telah teruji selama bertahun-tahun. Prosedur dilakukan dengan teknik bedah minor menggunakan alat steril dan jahitan halus yang akan larut dengan sendirinya.</p>
+            <div class="space-y-3 text-sm">
+                <div class="flex items-start gap-3"><i class="fas fa-check-circle text-accent mt-1"></i><span class="text-gray-600"><strong>Keunggulan:</strong> Biaya terjangkau, tersedia di semua klinik, hasil permanen.</span></div>
+                <div class="flex items-start gap-3"><i class="fas fa-clock text-accent mt-1"></i><span class="text-gray-600"><strong>Durasi:</strong> 20-30 menit.</span></div>
+                <div class="flex items-start gap-3"><i class="fas fa-heart text-accent mt-1"></i><span class="text-gray-600"><strong>Pemulihan:</strong> 7-10 hari.</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Cauter -->
+    <div id="modal-cauter" class="modal-overlay fixed inset-0 z-[200] flex items-center justify-center p-5" onclick="closeModalOutside(event, 'modal-cauter')">
+        <div class="modal-content bg-white rounded-2xl shadow-2xl max-w-lg w-full p-8 relative animate-slide-up" onclick="event.stopPropagation()">
+            <button onclick="closeModal('modal-cauter')" class="absolute top-4 right-4 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition">
+                <i class="fas fa-times text-gray-500"></i>
+            </button>
+            <div class="text-center mb-6">
+                <div class="w-16 h-16 bg-gradient-to-br from-accent to-brand-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-bolt text-white text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-extrabold text-brand-dark">Sunat Cauter (Electrocautery)</h3>
+            </div>
+            <p class="text-gray-600 leading-relaxed mb-4">Metode modern menggunakan alat electrocautery yang memotong kulit sekaligus membekukan pembuluh darah secara bersamaan menggunakan energi panas listrik.</p>
+            <div class="space-y-3 text-sm">
+                <div class="flex items-start gap-3"><i class="fas fa-check-circle text-accent mt-1"></i><span class="text-gray-600"><strong>Keunggulan:</strong> Minim perdarahan, proses lebih cepat, bekas luka lebih rapi.</span></div>
+                <div class="flex items-start gap-3"><i class="fas fa-clock text-accent mt-1"></i><span class="text-gray-600"><strong>Durasi:</strong> 15-25 menit.</span></div>
+                <div class="flex items-start gap-3"><i class="fas fa-heart text-accent mt-1"></i><span class="text-gray-600"><strong>Pemulihan:</strong> 7-10 hari.</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Klem -->
+    <div id="modal-klem" class="modal-overlay fixed inset-0 z-[200] flex items-center justify-center p-5" onclick="closeModalOutside(event, 'modal-klem')">
+        <div class="modal-content bg-white rounded-2xl shadow-2xl max-w-lg w-full p-8 relative animate-slide-up" onclick="event.stopPropagation()">
+            <button onclick="closeModal('modal-klem')" class="absolute top-4 right-4 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition">
+                <i class="fas fa-times text-gray-500"></i>
+            </button>
+            <div class="text-center mb-6">
+                <div class="w-16 h-16 bg-gradient-to-br from-accent to-brand-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-compress text-white text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-extrabold text-brand-dark">Sunat Klem (Clamp)</h3>
+            </div>
+            <p class="text-gray-600 leading-relaxed mb-4">Metode sunat modern tanpa jahitan menggunakan alat klem khusus. Kulit yang akan dibuang dijepit dengan klem, sehingga tidak memerlukan jahitan dan bekas luka lebih rapi.</p>
+            <div class="space-y-3 text-sm">
+                <div class="flex items-start gap-3"><i class="fas fa-check-circle text-accent mt-1"></i><span class="text-gray-600"><strong>Keunggulan:</strong> Tanpa jahitan, penyembuhan lebih cepat, nyeri minimal.</span></div>
+                <div class="flex items-start gap-3"><i class="fas fa-clock text-accent mt-1"></i><span class="text-gray-600"><strong>Durasi:</strong> 15-20 menit.</span></div>
+                <div class="flex items-start gap-3"><i class="fas fa-heart text-accent mt-1"></i><span class="text-gray-600"><strong>Pemulihan:</strong> 5-7 hari.</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Laser -->
+    <div id="modal-laser" class="modal-overlay fixed inset-0 z-[200] flex items-center justify-center p-5" onclick="closeModalOutside(event, 'modal-laser')">
+        <div class="modal-content bg-white rounded-2xl shadow-2xl max-w-lg w-full p-8 relative animate-slide-up" onclick="event.stopPropagation()">
+            <button onclick="closeModal('modal-laser')" class="absolute top-4 right-4 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition">
+                <i class="fas fa-times text-gray-500"></i>
+            </button>
+            <div class="text-center mb-6">
+                <div class="w-16 h-16 bg-gradient-to-br from-accent to-brand-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-laser text-white text-2xl"></i>
+                </div>
+                <h3 class="text-2xl font-extrabold text-brand-dark">Sunat Laser</h3>
+            </div>
+            <p class="text-gray-600 leading-relaxed mb-4">Metode sunat tercanggih menggunakan teknologi sinar laser presisi tinggi. Sinar laser memotong jaringan sekaligus membekukan pembuluh darah mikro, menghasilkan potongan yang sangat rapi dan steril.</p>
+            <div class="space-y-3 text-sm">
+                <div class="flex items-start gap-3"><i class="fas fa-check-circle text-accent mt-1"></i><span class="text-gray-600"><strong>Keunggulan:</strong> Presisi tinggi, minim perdarahan, bekas luka paling rapi, risiko infeksi sangat rendah.</span></div>
+                <div class="flex items-start gap-3"><i class="fas fa-clock text-accent mt-1"></i><span class="text-gray-600"><strong>Durasi:</strong> 10-20 menit.</span></div>
+                <div class="flex items-start gap-3"><i class="fas fa-heart text-accent mt-1"></i><span class="text-gray-600"><strong>Pemulihan:</strong> 5-7 hari.</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== LAYANAN BERDASARKAN PASIEN ==================== -->
+    <section id="layanan" class="py-20 px-5 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-accent font-semibold uppercase tracking-wider text-sm">Layanan Kami</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-brand-dark mt-3">Sunat untuk Semua Usia</h2>
+                <div class="w-16 h-1 bg-accent mx-auto mt-5 rounded-full"></div>
+                <p class="text-gray-500 mt-4">Layanan spesifik sesuai kebutuhan setiap pasien</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-5 max-w-5xl mx-auto">
+                <div class="card-hover bg-brand-lighter rounded-2xl p-6 text-center border border-accent-light/50" data-aos="zoom-in" data-aos-delay="0">
+                    <i class="fas fa-baby text-4xl text-accent mb-4"></i>
+                    <h3 class="font-bold text-brand-dark">Sunat Bayi</h3>
+                    <p class="text-gray-500 text-xs mt-2">Usia 0-1 tahun, prosedur lembut</p>
+                </div>
+                
+                <div class="card-hover bg-brand-lighter rounded-2xl p-6 text-center border border-accent-light/50" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fas fa-child text-4xl text-accent mb-4"></i>
+                    <h3 class="font-bold text-brand-dark">Sunat Anak</h3>
+                    <p class="text-gray-500 text-xs mt-2">Pendekatan ramah, minim trauma</p>
+                </div>
+                
+                <div class="card-hover bg-brand-lighter rounded-2xl p-6 text-center border border-accent-light/50" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fas fa-weight-scale text-4xl text-accent mb-4"></i>
+                    <h3 class="font-bold text-brand-dark">Sunat Gemuk</h3>
+                    <p class="text-gray-500 text-xs mt-2">Penanganan khusus pasien besar</p>
+                </div>
+                
+                <div class="card-hover bg-brand-lighter rounded-2xl p-6 text-center border border-accent-light/50" data-aos="zoom-in" data-aos-delay="300">
+                    <i class="fas fa-user text-4xl text-accent mb-4"></i>
+                    <h3 class="font-bold text-brand-dark">Sunat Dewasa</h3>
+                    <p class="text-gray-500 text-xs mt-2">Profesional untuk segala usia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== GALERI ==================== -->
+    <section id="galeri" class="py-20 px-5 bg-brand-lighter/30">
+        <div class="container mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-accent font-semibold uppercase tracking-wider text-sm">Dokumentasi</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-brand-dark mt-3">Galeri Klinik</h2>
+                <div class="w-16 h-1 bg-accent mx-auto mt-5 rounded-full"></div>
+                <p class="text-gray-500 mt-4">Suasana klinik yang bersih, higienis, dan ramah anak</p>
+            </div>
+            
+            <!-- Gallery Swiper -->
+            <div class="swiper gallerySwiper max-w-5xl mx-auto" data-aos="fade-up">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="gallery-img-wrapper h-72 md:h-96">
+                            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEisfJ97LJpwH6A4cvOxEIHWyK8XC86HcO-FJSvW_WmnBnpnTlN-F85SFK29RlXM9kOXtQvkJX6hFEuKaKRACmRE6KCJBHJjtzGs-NogtGFQFqc10IqgCif58ZOdpfus0GYj6rzBoWJB3s_JsdszzWsbKb-Ndr71nB9fAqFhZRbQMS4D68YVswmlEUMQhN5X" alt="Ruang Klinik" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-center text-sm text-gray-500 mt-3">Ruang Tindakan Steril</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gallery-img-wrapper h-72 md:h-96">
+                            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhBntNJyDidbs99jI4rO_zyqtEMPkKAUptdU7LeMqJzZdJP0Y8nHrQyNpCnW2l7Iz91NJxu6bHaLUMmd3iroH73PPWyyAL-PeYKjOpcfd8t16cO10NZ27bkYaTLXy9CzqBu1dPXGSFhgyFSE2B9wT-R6LhCIACnLgcQlUg1PfRxdIssQMiFQZ3-0JlV_sxo" alt="Ruang Tunggu" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-center text-sm text-gray-500 mt-3">Ruang Tunggu Nyaman</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gallery-img-wrapper h-72 md:h-96">
+                            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhugxMJNZj-kwCDlhr1Q38srfeAo6vWwPdBdwt7j4SagIaZMcrLqaRuqXG96E7xx-2T47H56i1zUhXDK8pp0Bu016olv5qjM3PYYWCeq58ZNt0Hl6Mva6Q7iOn8GoIr5x3WvhvhwEYrpU0rBsuTXkxVmvWOCrw2Cdf3AWOjPbswMMq0vnUr6qoIybGcd5d6" alt="Tim Medis" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-center text-sm text-gray-500 mt-3">Tim Medis Profesional</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gallery-img-wrapper h-72 md:h-96">
+                            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEg-zkM1QTVFSYUpDaxyeJtgdmp0OZJNbPiwgs762LpNBHa1sKrZpFMC6fnayXCWRvW-WnXgpRTfUhoA76hPRlVBRzus_jlKYbsNt0JwQEd9Pyhi6o1uvOTxRhlxfgSqpiUAFMrwL3zKZ2ysnNplK2vdbt9zl1MwxPdno1R1jdPAxfiIZMkn1xgX4vQSaSB6" alt="Peralatan" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-center text-sm text-gray-500 mt-3">Peralatan Modern & Steril</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gallery-img-wrapper h-72 md:h-96">
+                            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhBF3e5zUVQ9GY2yvm5rNPBN02qVciW41xsVQQ_hV2xeE44g5SE7gFLyEMSZ5glgNu8CXG3oL9DczqEY-gM9H2I0pRXfAy8uCtHDtTjiT-te4WTauvwp_KZZofwJ_UoOoa15QlCpepmkIez6Li-FNEoT5AaoYjrCfjbOTWUp_AIHvvnXIF4oR3vvK_o2T3P" alt="Area Parkir" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-center text-sm text-gray-500 mt-3">Area Parkir Luas</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gallery-img-wrapper h-72 md:h-96">
+                            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgHhsN6grN6EepXcez0G-l3l0KYzDQbqrPRTg3-Usm62hbklWc7cJeFxIg3-UjTdxLsqJ_6OCojtwpjCmRxEGE6nxTBzYowACDKWD-8_ir-T7gfarhiie_e5vJzkczumqtnvjlm7WwBJmUYV-xR35o06SvbY5X--0qGOf9Bih9dxNlI680zTEW5AOtXr43R" alt="Dekorasi Ramah Anak" class="w-full h-full object-cover">
+                        </div>
+                        <p class="text-center text-sm text-gray-500 mt-3">Dekorasi Ramah Anak</p>
+                    </div>
+                </div>
+                <div class="swiper-pagination !relative mt-6"></div>
+                <div class="swiper-button-next !text-accent"></div>
+                <div class="swiper-button-prev !text-accent"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== INSTAGRAM FEED ==================== -->
+    <section id="instagram" class="py-20 px-5 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-accent font-semibold uppercase tracking-wider text-sm">Media Sosial</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-brand-dark mt-3">
+                    <i class="fab fa-instagram text-pink-500 mr-2"></i> Ikuti Kami di Instagram
+                </h2>
+                <div class="w-16 h-1 bg-accent mx-auto mt-5 rounded-full"></div>
+                <p class="text-gray-500 mt-4">Update terbaru, tips kesehatan, dan testimoni pasien</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="insta-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-aos="fade-up" data-aos-delay="0">
+                    <div class="relative">
+                        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEihBCsBXfZa15T0YDdkPXE5GV9pFsYw1gHUVtwM-Cth7vVzKwlp-yn5rmP22tTqlmsd0vuu464My0c488Wwz7eVtGde0BtliPwlDsQR2L7pYc6LBTn3KRaEzm6Eq4TvONkjkw8dly218N--xnx3wnS2KS-piMtfPpKlovsFj1J4UKgw-AOwxSvbrdXF5Ene" alt="Instagram Post" class="w-full h-56 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-4">
+                            <span class="text-white text-xs"><i class="far fa-heart mr-1"></i> 1.2rb suka</span>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i class="fab fa-instagram text-pink-500 text-xl"></i>
+                            <span class="font-semibold text-sm text-brand-dark">@rumahsunatborneo_official</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">Suasana klinik yang bersih dan nyaman. Si kecil dijamin betah! ✨</p>
+                        <a href="https://www.instagram.com/rumahsunatborneo_official/" target="_blank" class="inline-block mt-3 text-pink-500 text-sm font-semibold hover:underline">Lihat di Instagram →</a>
+                    </div>
+                </div>
+                
+                <div class="insta-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative">
+                        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEiLu_7rYQ6GyFW9E1LOm2gguuUxbhq4Tg8ViSuWBLgmaWygZ93P4uYklJMsi9vUkquiitYbAbj8OQXtcirENEcOAEhPefHbMcRFU-LjkqHlQzJKhNOdcvVtA4s7_PjU6_xBLj-xaYKYqRwOKLWhYsnZHaTsVWD3Oba5fQae7Dzg6Jhw-ol80sOeAIJvWefr" alt="Instagram Post" class="w-full h-56 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-4">
+                            <span class="text-white text-xs"><i class="far fa-heart mr-1"></i> 980 suka</span>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i class="fab fa-instagram text-pink-500 text-xl"></i>
+                            <span class="font-semibold text-sm text-brand-dark">@rumahsunatborneo_official</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">Tim medis profesional siap melayani sunat modern untuk si kecil. 💪</p>
+                        <a href="https://www.instagram.com/rumahsunatborneo_official/" target="_blank" class="inline-block mt-3 text-pink-500 text-sm font-semibold hover:underline">Lihat di Instagram →</a>
+                    </div>
+                </div>
+                
+                <div class="insta-card bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative">
+                        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEj3wLRsTWO2PZoqzg3jBeBhRUrHfkCkgMnxmZ98UQoBTT2Ypf6Ncqj8O3RMJwHxlPphI32PAK4CwHsR6kCgvI1Urdgx57-YGG2NqXtNQnf-vipPyTqM8UeGzduYeT35vnYsG-KXsMYWPrZ6Ikx6KdZYmf4SNWIBS1llZ2h6DOi_JzNZ3h1HcCXX6UU9vQ5k" alt="Instagram Post" class="w-full h-56 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-4">
+                            <span class="text-white text-xs"><i class="far fa-heart mr-1"></i> 1.5rb suka</span>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i class="fab fa-instagram text-pink-500 text-xl"></i>
+                            <span class="font-semibold text-sm text-brand-dark">@rumahsunatborneo_official</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">Testimoni pasien: "Proses cepat, nggak sakit, dan hasilnya rapi!" 🌟</p>
+                        <a href="https://www.instagram.com/rumahsunatborneo_official/" target="_blank" class="inline-block mt-3 text-pink-500 text-sm font-semibold hover:underline">Lihat di Instagram →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10" data-aos="fade-up">
+                <a href="https://www.instagram.com/rumahsunatborneo_official/" target="_blank" class="btn-shine bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-4 px-8 rounded-full text-lg inline-flex items-center gap-2 shadow-xl transition">
+                    <i class="fab fa-instagram text-xl"></i> Kunjungi Instagram Kami
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TESTIMONIAL ==================== -->
+    <section id="testimoni" class="py-20 px-5 bg-gradient-to-br from-brand-dark to-brand-primary text-white">
+        <div class="container mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-warm font-semibold uppercase tracking-wider text-sm">Testimoni Pasien</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold mt-3">Rating Sempurna 5.0 ⭐</h2>
+                <div class="w-16 h-1 bg-warm mx-auto mt-5 rounded-full"></div>
+                <p class="text-brand-light mt-4">Kepercayaan dan kepuasan pasien adalah prioritas kami</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="testimonial-card bg-white/10 backdrop-blur-sm rounded-2xl p-7 border border-white/20" data-aos="fade-up" data-aos-delay="0">
+                    <div class="flex text-warm mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="italic text-white/90 leading-relaxed">"Pelayanan sangat ramah. Anak saya yang tadinya takut jadi tenang karena tempatnya nyaman, ada mainannya. Proses cepat, penyembuhan juga cepat. Top banget!"</p>
+                    <div class="mt-6 flex items-center gap-3">
+                        <div class="w-10 h-10 bg-warm rounded-full flex items-center justify-center text-brand-dark font-bold text-sm">A</div>
+                        <div>
+                            <p class="font-bold text-sm">Bpk. Ahmad</p>
+                            <p class="text-brand-light/70 text-xs">Balikpapan Selatan</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-white/10 backdrop-blur-sm rounded-2xl p-7 border border-white/20" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex text-warm mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="italic text-white/90 leading-relaxed">"Sunat dewasa ternyata nggak sakit. Dokternya profesional, konsultasi 24 jam sangat membantu. Recommended buat yang masih ragu!"</p>
+                    <div class="mt-6 flex items-center gap-3">
+                        <div class="w-10 h-10 bg-warm rounded-full flex items-center justify-center text-brand-dark font-bold text-sm">R</div>
+                        <div>
+                            <p class="font-bold text-sm">Rizky</p>
+                            <p class="text-brand-light/70 text-xs">Sepinggan</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card bg-white/10 backdrop-blur-sm rounded-2xl p-7 border border-white/20" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex text-warm mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="italic text-white/90 leading-relaxed">"Lokasi di Borneo Paradiso mudah dijangkau. Parkir luas. Anak saya cepet sembuhnya, 2 hari udah bisa main lagi. Komunikasi dokter juga enak."</p>
+                    <div class="mt-6 flex items-center gap-3">
+                        <div class="w-10 h-10 bg-warm rounded-full flex items-center justify-center text-brand-dark font-bold text-sm">S</div>
+                        <div>
+                            <p class="font-bold text-sm">Ibu Sari</p>
+                            <p class="text-brand-light/70 text-xs">Balikpapan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CTA BANNER ==================== -->
+    <section class="py-16 px-5 bg-gradient-to-r from-accent to-brand-primary">
+        <div class="container mx-auto text-center text-white" data-aos="zoom-in">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Konsultasikan dengan Kami, <span class="text-warm">Gratis!</span></h2>
+            <p class="text-brand-light/90 text-lg mb-8 max-w-2xl mx-auto">Jangan ragu untuk bertanya. Tim dokter kami siap menjawab semua pertanyaan Anda via WhatsApp.</p>
+            <a href="https://wa.me/6282254714341?text=Halo%20Top%20Sunat%20Borneo%2C%20saya%20ingin%20konsultasi%20gratis." target="_blank" class="btn-shine bg-green-500 hover:bg-green-600 text-white font-bold py-5 px-10 rounded-full text-xl inline-flex items-center gap-3 shadow-2xl">
+                <i class="fab fa-whatsapp text-2xl"></i> HUBUNGI KAMI
+            </a>
+        </div>
+    </section>
+
+    <!-- ==================== ARTIKEL / BLOG ==================== -->
+    <section id="artikel" class="py-20 px-5 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-accent font-semibold uppercase tracking-wider text-sm">Info Terkini</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-brand-dark mt-3">Artikel & Edukasi</h2>
+                <div class="w-16 h-1 bg-accent mx-auto mt-5 rounded-full"></div>
+                <p class="text-gray-500 mt-4">Informasi penting seputar sunat dan kesehatan untuk Anda</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <article class="article-card card-hover bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-aos="fade-up" data-aos-delay="0">
+                    <div class="article-img-wrapper h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500" alt="Manfaat Sunat Dini" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-accent text-xs font-semibold bg-accent-light/50 px-3 py-1 rounded-full">Edukasi</span>
+                        <h3 class="font-bold text-brand-dark mt-3 text-lg">5 Manfaat Medis Sunat Sejak Dini</h3>
+                        <p class="text-gray-500 text-sm mt-2 line-clamp-2">Dari sisi kesehatan dan kebersihan, sunat sejak dini memiliki banyak keuntungan yang perlu orang tua ketahui.</p>
+                        <button onclick="openArticleModal('artikel1')" class="inline-block mt-4 text-accent font-semibold text-sm hover:underline cursor-pointer">Baca Selengkapnya →</button>
+                    </div>
+                </article>
+                
+                <article class="article-card card-hover bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-aos="fade-up" data-aos-delay="100">
+                    <div class="article-img-wrapper h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=500" alt="Persiapan Sunat" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-accent text-xs font-semibold bg-accent-light/50 px-3 py-1 rounded-full">Tips</span>
+                        <h3 class="font-bold text-brand-dark mt-3 text-lg">Persiapan Sebelum Sunat: Panduan Orang Tua</h3>
+                        <p class="text-gray-500 text-sm mt-2 line-clamp-2">Hal-hal penting yang perlu disiapkan agar si kecil siap menjalani sunat tanpa rasa cemas dan takut.</p>
+                        <button onclick="openArticleModal('artikel2')" class="inline-block mt-4 text-accent font-semibold text-sm hover:underline cursor-pointer">Baca Selengkapnya →</button>
+                    </div>
+                </article>
+                
+                <article class="article-card card-hover bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-aos="fade-up" data-aos-delay="200">
+                    <div class="article-img-wrapper h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=500" alt="Metode Minim Sakit" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-accent text-xs font-semibold bg-accent-light/50 px-3 py-1 rounded-full">Teknologi</span>
+                        <h3 class="font-bold text-brand-dark mt-3 text-lg">Metode Sunat Modern: Minim Sakit, Cepat Sembuh</h3>
+                        <p class="text-gray-500 text-sm mt-2 line-clamp-2">Perbandingan metode sunat modern yang tersedia dan keunggulan masing-masing untuk kenyamanan pasien.</p>
+                        <button onclick="openArticleModal('artikel3')" class="inline-block mt-4 text-accent font-semibold text-sm hover:underline cursor-pointer">Baca Selengkapnya →</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== MODAL POPUP ARTIKEL ==================== -->
+    <!-- Modal Artikel 1 -->
+    <div id="modal-artikel1" class="modal-overlay fixed inset-0 z-[200] flex items-center justify-center p-5" onclick="closeArticleModalOutside(event, 'modal-artikel1')">
+        <div class="modal-content bg-white rounded-2xl shadow-2xl max-w-2xl w-full p-8 relative animate-slide-up overflow-y-auto max-h-[90vh]" onclick="event.stopPropagation()">
+            <button onclick="closeArticleModal('modal-artikel1')" class="absolute top-4 right-4 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition z-10">
+                <i class="fas fa-times text-gray-500"></i>
+            </button>
+            <div class="mb-6">
+                <div class="w-16 h-16 bg-gradient-to-br from-accent to-brand-primary rounded-2xl flex items-center justify-center mb-4">
+                    <i class="fas fa-newspaper text-white text-2xl"></i>
+                </div>
+                <span class="text-accent text-xs font-semibold bg-accent-light/50 px-3 py-1 rounded-full">Edukasi</span>
+                <h3 class="text-2xl font-extrabold text-brand-dark mt-3">5 Manfaat Medis Sunat Sejak Dini</h3>
+            </div>
+            <div class="prose prose-sm max-w-none text-gray-600 leading-relaxed space-y-4">
+                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800" alt="Manfaat Sunat Dini" class="rounded-xl w-full mb-4">
+                <p><strong>Sunat atau sirkumsisi</strong> adalah prosedur medis yang memiliki banyak manfaat bagi kesehatan, terutama jika dilakukan sejak dini. Berikut adalah 5 manfaat medis sunat sejak dini yang perlu diketahui para orang tua:</p>
+                
+                <h4 class="font-bold text-brand-dark text-lg mt-4">1. Menjaga Kebersihan Organ Vital</h4>
+                <p>Sunat memudahkan membersihkan area organ vital, sehingga mengurangi risiko penumpukan kotoran (smegma) yang dapat menyebabkan infeksi dan bau tidak sedap.</p>
+                
+                <h4 class="font-bold text-brand-dark text-lg mt-4">2. Mencegah Infeksi Saluran Kemih (ISK)</h4>
+                <p>Penelitian menunjukkan bahwa pria yang disunat memiliki risiko lebih rendah terkena infeksi saluran kemih, terutama pada tahun pertama kehidupan. ISK pada bayi dapat berbahaya dan memerlukan perawatan serius.</p>
+                
+                <h4 class="font-bold text-brand-dark text-lg mt-4">3. Menurunkan Risiko Penyakit Menular Seksual</h4>
+                <p>Sunat terbukti dapat menurunkan risiko penularan HIV hingga 60% serta mengurangi risiko HPV dan herpes genital. Ini merupakan perlindungan jangka panjang yang sangat berharga.</p>
+                
+                <h4 class="font-bold text-brand-dark text-lg mt-4">4. Mencegah Kanker Penis</h4>
+                <p>Meskipun kanker penis jarang terjadi, sunat sejak dini hampir sepenuhnya menghilangkan risiko terkena kanker jenis ini. Tidak ada kasus kanker penis yang dilaporkan pada pria yang disunat saat bayi.</p>
+                
+                <h4 class="font-bold text-brand-dark text-lg mt-4">5. Menghindari Risiko Phimosis dan Paraphimosis</h4>
+                <p>Phimosis adalah kondisi dimana kulup terlalu sempit sehingga sulit ditarik ke belakang. Sunat menghilangkan risiko ini sepenuhnya, serta mencegah paraphimosis yang merupakan kondisi darurat medis.</p>
+                
+                <div class="bg-brand-lighter/30 p-4 rounded-xl mt-4">
+                    <p class="text-sm text-gray-600"><strong class="text-brand-dark">Kesimpulan:</strong> Sunat sejak dini memberikan perlindungan kesehatan jangka panjang yang signifikan. Konsultasikan dengan dokter untuk menentukan waktu yang tepat bagi anak Anda.</p>
+                </div>
+            </div>
+            <div class="mt-6 pt-4 border-t border-gray-100">
+                <a href="https://wa.me/6282254714341?text=Halo%20Top%20Sunat%20Borneo%2C%20saya%20ingin%20konsultasi%20soal%20manfaat%20sunat%20dini" target="_blank" class="btn-shine bg-accent hover:bg-accent/90 text-white font-bold py-3 px-6 rounded-full text-sm inline-flex items-center gap-2 transition w-full justify-center">
+                    <i class="fab fa-whatsapp text-lg"></i> Konsultasi dengan Dokter
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Artikel 2 -->
+    <div id="modal-artikel2" class="modal-overlay fixed inset-0 z-[200] flex items-center justify-center p-5" onclick="closeArticleModalOutside(event, 'modal-artikel2')">
+        <div class="modal-content bg-white rounded-2xl shadow-2xl max-w-2xl w-full p-8 relative animate-slide-up overflow-y-auto max-h-[90vh]" onclick="event.stopPropagation()">
+            <button onclick="closeArticleModal('modal-artikel2')" class="absolute top-4 right-4 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition z-10">
+                <i class="fas fa-times text-gray-500"></i>
+            </button>
+            <div class="mb-6">
+                <div class="w-16 h-16 bg-gradient-to-br from-accent to-brand-primary rounded-2xl flex items-center justify-center mb-4">
+                    <i class="fas fa-list-check text-white text-2xl"></i>
+                </div>
+                <span class="text-accent text-xs font-semibold bg-accent-light/50 px-3 py-1 rounded-full">Tips</span>
+                <h3 class="text-2xl font-extrabold text-brand-dark mt-3">Persiapan Sebelum Sunat: Panduan Orang Tua</h3>
+            </div>
+            <div class="prose prose-sm max-w-none text-gray-600 leading-relaxed space-y-4">
+                <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=800" alt="Persiapan Sunat" class="rounded-xl w-full mb-4">
+                <p>Persiapan yang matang akan membuat proses sunat berjalan lancar dan anak merasa nyaman. Berikut panduan lengkap untuk orang tua:</p>
+                
+                <h4 class="font-bold text-brand-dark text-lg mt-4">📅 1-2 Minggu Sebelum Sunat</h4>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li>Konsultasi dengan dokter untuk memastikan kondisi kesehatan anak baik</li>
+                    <li>Jelaskan pada anak tentang prosedur sunat dengan bahasa yang positif dan mudah dipahami</li>
+                    <li>Jangan menakut-nakuti anak dengan cerita tentang rasa sakit</li>
+                </ul>
+                
+                <h4 class="font-bold text-brand-dark text-lg mt-4">📋 1 Hari Sebelum Sunat</h4>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li>Pastikan anak cukup istirahat dan tidur</li>
+                    <li>Mandikan anak dengan bersih, terutama area yang akan disunat</li>
+                    <li>Jangan memberi makan/minum 4-6 jam sebelum prosedur (sesuai instruksi dokter)</li>
+                    <li>Siapkan pakaian longgar yang mudah dipakai (seperti sarung atau celana longgar)</li>
+                </ul>
+                
+                <h4 class="font-bold text-brand-dark text-lg mt-4">🎒 Barang yang Perlu Dibawa</h4>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li>Baju ganti yang longgar</li>
+                    <li>Mainan atau buku favorit anak untuk mengalihkan perhatian</li>
+                    <li>KTP dan kartu berobat (jika ada)</li>
+                    <li>Kudapan ringan untuk setelah prosedur</li>
+                </ul>
+                
+                <h4 class="font-bold text-brand-dark text-lg mt-4">💡 Tips Mental untuk Anak</h4>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li>Gunakan kata "sunat" bukan "disunat" agar anak merasa lebih berdaya</li>
+                    <li>Ceritakan pengalaman positif dari kakak atau teman yang sudah sunat</li>
+                    <li>Janjikan hadiah atau kegiatan seru setelah sunat</li>
+                    <li>Dampingi anak selama prosedur (klinik kami mengizinkan orang tua menemani)</li>
+                </ul>
+                
+                <div class="bg-brand-lighter/30 p-4 rounded-xl mt-4">
+                    <p class="text-sm text-gray-600"><strong class="text-brand-dark">Catatan Penting:</strong> Jangan ragu untuk bertanya pada tim medis jika ada hal yang kurang jelas. Klinik kami menyediakan konsultasi 24 jam untuk menjawab semua pertanyaan Anda.</p>
+                </div>
+            </div>
+            <div class="mt-6 pt-4 border-t border-gray-100">
+                <a href="https://wa.me/6282254714341?text=Halo%20Top%20Sunat%20Borneo%2C%20saya%20ingin%20konsultasi%20persiapan%20sunat%20anak" target="_blank" class="btn-shine bg-accent hover:bg-accent/90 text-white font-bold py-3 px-6 rounded-full text-sm inline-flex items-center gap-2 transition w-full justify-center">
+                    <i class="fab fa-whatsapp text-lg"></i> Tanya Persiapan Sunat
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Artikel 3 -->
+    <div id="modal-artikel3" class="modal-overlay fixed inset-0 z-[200] flex items-center justify-center p-5" onclick="closeArticleModalOutside(event, 'modal-artikel3')">
+        <div class="modal-content bg-white rounded-2xl shadow-2xl max-w-2xl w-full p-8 relative animate-slide-up overflow-y-auto max-h-[90vh]" onclick="event.stopPropagation()">
+            <button onclick="closeArticleModal('modal-artikel3')" class="absolute top-4 right-4 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition z-10">
+                <i class="fas fa-times text-gray-500"></i>
+            </button>
+            <div class="mb-6">
+                <div class="w-16 h-16 bg-gradient-to-br from-accent to-brand-primary rounded-2xl flex items-center justify-center mb-4">
+                    <i class="fas fa-microscope text-white text-2xl"></i>
+                </div>
+                <span class="text-accent text-xs font-semibold bg-accent-light/50 px-3 py-1 rounded-full">Teknologi</span>
+                <h3 class="text-2xl font-extrabold text-brand-dark mt-3">Metode Sunat Modern: Minim Sakit, Cepat Sembuh</h3>
+            </div>
+            <div class="prose prose-sm max-w-none text-gray-600 leading-relaxed space-y-4">
+                <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800" alt="Metode Sunat Modern" class="rounded-xl w-full mb-4">
+                <p>Teknologi sunat terus berkembang. Berikut perbandingan metode sunat modern yang tersedia di Top Sunat Borneo:</p>
+                
+                <div class="grid md:grid-cols-2 gap-4 mt-4">
+                    <div class="bg-brand-lighter/30 p-4 rounded-xl">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i class="fas fa-bolt text-accent"></i>
+                            <h4 class="font-bold text-brand-dark">Metode Cauter</h4>
+                        </div>
+                        <p class="text-xs text-gray-600">Menggunakan energi panas listrik, memotong sekaligus membekukan pembuluh darah. Minim perdarahan, proses cepat 15-25 menit.</p>
+                    </div>
+                    <div class="bg-brand-lighter/30 p-4 rounded-xl">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i class="fas fa-compress text-accent"></i>
+                            <h4 class="font-bold text-brand-dark">Metode Klem (Clamp)</h4>
+                        </div>
+                        <p class="text-xs text-gray-600">Tanpa jahitan, menggunakan alat khusus. Pemulihan cepat 5-7 hari, nyeri minimal, tanpa bekas luka jahitan.</p>
+                    </div>
+                    <div class="bg-brand-lighter/30 p-4 rounded-xl">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i class="fas fa-laser text-accent"></i>
+                            <h4 class="font-bold text-brand-dark">Metode Laser</h4>
+                        </div>
+                        <p class="text-xs text-gray-600">Teknologi tercanggih dengan presisi tinggi. Risiko infeksi sangat rendah, bekas luka paling rapi, durasi 10-20 menit.</p>
+                    </div>
+                    <div class="bg-brand-lighter/30 p-4 rounded-xl">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i class="fas fa-cut text-accent"></i>
+                            <h4 class="font-bold text-brand-dark">Metode Konvensional</h4>
+                        </div>
+                        <p class="text-xs text-gray-600">Metode klasik yang aman dan terjangkau. Hasil permanen, tersedia di semua klinik dengan biaya kompetitif.</p>
+                    </div>
+                </div>
+                
+                <h4 class="font-bold text-brand-dark text-lg mt-4">🎯 Rekomendasi Metode Berdasarkan Usia</h4>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li><strong>Bayi (0-1 tahun):</strong> Metode Klem atau Laser - prosedur cepat, pemulihan optimal</li>
+                    <li><strong>Anak-anak (2-10 tahun):</strong> Semua metode bisa, disesuaikan dengan kondisi anak</li>
+                    <li><strong>Remaja/Dewasa:</strong> Laser atau Cauter - hasil rapi, minim rasa sakit</li>
+                    <li><strong>Pasien dengan berat badan berlebih:</strong> Laser - presisi tinggi untuk hasil terbaik</li>
+                </ul>
+                
+                <div class="bg-brand-lighter/30 p-4 rounded-xl mt-4">
+                    <p class="text-sm text-gray-600"><strong class="text-brand-dark">💡 Yang perlu diingat:</strong> Setiap metode memiliki keunggulan masing-masing. Dokter akan merekomendasikan metode terbaik berdasarkan usia, kondisi kesehatan, dan kebutuhan pasien.</p>
+                </div>
+            </div>
+            <div class="mt-6 pt-4 border-t border-gray-100">
+                <a href="https://wa.me/6282254714341?text=Halo%20Top%20Sunat%20Borneo%2C%20saya%20mau%20konsultasi%20metode%20sunat%20yang%20tepat" target="_blank" class="btn-shine bg-accent hover:bg-accent/90 text-white font-bold py-3 px-6 rounded-full text-sm inline-flex items-center gap-2 transition w-full justify-center">
+                    <i class="fab fa-whatsapp text-lg"></i> Konsultasi Pilih Metode Sunat
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== FOOTER & KONTAK ==================== -->
+    <footer id="kontak" class="bg-brand-dark text-white pt-20 pb-8">
+        <div class="container mx-auto px-5">
+            <div class="grid md:grid-cols-3 gap-12 mb-16">
+                <!-- Kolom 1: Tentang -->
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 rounded-full overflow-hidden bg-white p-1">
+                            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgJfgru0kMFAokqOkSHCE69txWpwcsYmIvLztiKQg36xUkcZCDYOfsFxjubQ2EN2Zdb_XMsWlWPAiGs7QJUQNP9XtEneJ29SdcHEXQ_IwrH31fxsx1il_1iq-czZ_hkEWekQLSSouDiru2eYvJ0bOqpWBposRxvYZhxtjrqpHMElgCJ79P8kQ8QKuWs4Rrp" 
+                                 alt="Logo" 
+                                 class="w-full h-full object-contain">
+                        </div>
+                        <span class="font-bold text-xl">Top Sunat Borneo Sepinggan</span>
+                    </div>
+                    <p class="text-brand-light/70 text-sm leading-relaxed">Klinik khitan modern di Balikpapan Selatan. Melayani sunat bayi, anak, dan dewasa dengan metode minim nyeri. Buka 24 jam, Senin-Minggu.</p>
+                    <div class="flex gap-4 mt-6">
+                        <a href="https://www.instagram.com/rumahsunatborneo_official/" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-pink-500 transition text-lg"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/6282254714341" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-green-500 transition text-lg"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.google.com/maps/place/Top+Sunat+Borneo+Sepinggan" target="_blank" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-accent transition text-lg"><i class="fas fa-map-marker-alt"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Kolom 2: Navigasi -->
+                <div>
+                    <h3 class="font-bold text-lg mb-6">Navigasi</h3>
+                    <ul class="space-y-3 text-brand-light/70 text-sm">
+                        <li><a href="#home" class="hover:text-accent transition">→ Beranda</a></li>
+                        <li><a href="#tentang" class="hover:text-accent transition">→ Tentang</a></li>
+                        <li><a href="#metode" class="hover:text-accent transition">→ Metode Sunat</a></li>
+                        <li><a href="#layanan" class="hover:text-accent transition">→ Layanan</a></li>
+                        <li><a href="#galeri" class="hover:text-accent transition">→ Galeri</a></li>
+                        <li><a href="#artikel" class="hover:text-accent transition">→ Artikel</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Kolom 3: Kontak -->
+                <div>
+                    <h3 class="font-bold text-lg mb-6">Kontak & Alamat</h3>
+                    <div class="space-y-4 text-sm">
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-map-pin text-accent mt-1"></i>
+                            <p class="text-brand-light/70">Ruko Borneo Paradiso, Jl. Mulawarman Blok B12A, Sepinggan, Kec. Balikpapan Selatan, Kota Balikpapan, Kalimantan Timur 76116</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-phone-alt text-accent"></i>
+                            <p class="text-brand-light/70">0822-5471-4341</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="far fa-clock text-accent"></i>
+                            <div>
+                                <p class="text-brand-light/70">Buka 24 Jam</p>
+                                <p class="text-brand-light/50 text-xs">Senin - Minggu</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fab fa-instagram text-accent"></i>
+                            <p class="text-brand-light/70">@rumahsunatborneo_official</p>
+                        </div>
+                    </div>
+                    <!-- Peta kecil -->
+                    <div class="mt-6 rounded-xl overflow-hidden h-40 border border-white/20">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.058767773675!2d116.9250184!3d-1.2512988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df145aa3fa9a407%3A0x7cdac3c72f4c44fd!2sTop%20Sunat%20Borneo%20Sepinggan!5e0!3m2!1sid!2sid!4v1718000000000!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+                <p class="text-brand-light/40 text-sm">© 2026 Top Sunat Borneo Sepinggan. All rights reserved.</p>
+                <p class="text-brand-light/30 text-xs">Klinik Sunat Modern • Rating 5.0 ⭐ • Buka 24 Jam</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== FLOATING WHATSAPP ==================== -->
+    <a href="https://wa.me/6282254714341?text=Halo%20Top%20Sunat%20Borneo%2C%20saya%20mau%20tanya." target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white rounded-full p-5 shadow-2xl wa-float flex items-center justify-center" aria-label="Chat WhatsApp">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // ===== Initialize AOS =====
+        AOS.init({ duration: 800, once: true, offset: 60 });
+        
+        // ===== Navbar Scroll =====
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 30) {
+                navbar.classList.remove('navbar-transparent');
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+                navbar.classList.add('navbar-transparent');
+            }
+        });
+        
+        // ===== Mobile Menu =====
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = menuToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuToggle.querySelector('i').classList.add('fa-bars');
+                menuToggle.querySelector('i').classList.remove('fa-times');
+            });
+        });
+        
+        // ===== Hero Swiper =====
+        const heroSwiper = new Swiper('.heroSwiper', {
+            loop: true,
+            autoplay: { delay: 5000, disableOnInteraction: false },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+            effect: 'fade',
+            fadeEffect: { crossFade: true },
+            parallax: true,
+            speed: 800,
+        });
+        
+        // ===== Gallery Swiper =====
+        const gallerySwiper = new Swiper('.gallerySwiper', {
+            loop: true,
+            autoplay: { delay: 3500, disableOnInteraction: false },
+            pagination: { el: '.gallerySwiper .swiper-pagination', clickable: true },
+            navigation: { nextEl: '.gallerySwiper .swiper-button-next', prevEl: '.gallerySwiper .swiper-button-prev' },
+            slidesPerView: 1,
+            spaceBetween: 20,
+            breakpoints: {
+                768: { slidesPerView: 2, spaceBetween: 20 },
+                1024: { slidesPerView: 3, spaceBetween: 25 },
+            }
+        });
+        
+        // ===== Modal Functions =====
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        function closeModalOutside(event, modalId) {
+            if (event.target === document.getElementById(modalId)) {
+                closeModal(modalId);
+            }
+        }
+        
+        // ===== Article Modal Functions =====
+        function openArticleModal(modalId) {
+            document.getElementById('modal-' + modalId).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeArticleModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        function closeArticleModalOutside(event, modalId) {
+            if (event.target === document.getElementById(modalId)) {
+                closeArticleModal(modalId);
+            }
+        }
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal-overlay.active').forEach(modal => {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            }
+        });
+        
+        // ===== Counter Animation =====
+        function animateCounter(el, target, duration = 2000) {
+            let start = 0;
+            const step = target / (duration / 16);
+            const timer = setInterval(() => {
+                start += step;
+                if (start >= target) { el.textContent = target; clearInterval(timer); }
+                else { el.textContent = Math.floor(start); }
+            }, 16);
+        }
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.querySelectorAll('.count').forEach(c => {
+                        animateCounter(c, parseInt(c.getAttribute('data-target')));
+                    });
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        document.querySelectorAll('.counter-value').forEach(el => counterObserver.observe(el));
+        
+        // ===== Smooth Scroll =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
