@@ -178,6 +178,20 @@
             25% { transform: translateY(-15px) rotate(-5deg); }
             75% { transform: translateY(-25px) rotate(5deg); }
         }
+        
+        /* Style untuk gambar metode agar full/tidak terpotong */
+        .method-img-container {
+            background-color: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .method-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background-color: #f0f9fa;
+        }
     </style>
 </head>
 <body class="bg-white overflow-x-hidden">
@@ -431,7 +445,7 @@
         </div>
     </section>
 
-    <!-- ==================== METODE SUNAT ==================== -->
+    <!-- ==================== METODE SUNAT TERKINI (UPDATED WITH FULL IMAGES) ==================== -->
     <section id="metode" class="py-20 px-5 bg-brand-lighter/30 relative overflow-hidden">
         <div class="container mx-auto relative z-20">
             <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
@@ -441,132 +455,309 @@
                 <p class="text-gray-500 mt-4">Kami menguasai berbagai metode sunat modern untuk hasil terbaik</p>
             </div>
             
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-5 max-w-5xl mx-auto">
-                <!-- Metode 1 -->
-                <div class="card-hover bg-white rounded-2xl p-6 text-center shadow-md border border-gray-100" data-aos="fade-up" data-aos-delay="0">
-                    <div class="w-14 h-14 bg-gradient-to-br from-accent to-brand-primary rounded-xl flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-cut text-white text-xl"></i>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <!-- Metode 1: Laser -->
+                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100" data-aos="fade-up" data-aos-delay="0">
+                    <div class="method-img-container h-56 w-full bg-gradient-to-br from-gray-50 to-brand-lighter/30">
+                        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEi3olMpJd1BJ48dcY5OJgRJlICMoN0TGyd5FnF_QxouJpb18XUosRwWxmItS7iS7dwojqMM07VHFWPRRCAMnzH49SNMUmLCUtQ6N82IJUZvK-rrbQNMsEulkid-prkKikmrr5gOVrZDQa1jBW5GPbWqVZobf2zcAMVx3LoVaQKGuu5ahLRXGyUhAGcN9CLZ" 
+                             alt="Metode Laser" 
+                             class="method-img">
                     </div>
-                    <h3 class="font-bold text-brand-dark">Konvensional</h3>
-                    <p class="text-gray-500 text-xs mt-2">Metode klasik yang aman</p>
-                    <button onclick="openModal('modal-konvensional')" class="inline-block mt-3 text-accent text-xs font-semibold hover:underline cursor-pointer">Selengkapnya →</button>
+                    <div class="p-6 text-center">
+                        <div class="w-14 h-14 bg-gradient-to-br from-accent to-brand-primary rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-laser text-white text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-brand-dark text-lg">Bius Sunat Tanpa Suntik</h3>
+                        <p class="text-gray-500 text-sm mt-2"></p>
+                        <button onclick="openModal('modal-price-laser')" class="mt-4 bg-accent hover:bg-accent/90 text-white font-bold py-2.5 px-5 rounded-full text-sm inline-flex items-center gap-2 transition shadow-md w-full justify-center">
+                            <i class="fas fa-tag"></i> Lihat Detail Harga
+                        </button>
+                    </div>
                 </div>
                 
-                <!-- Metode 2 -->
-                <div class="card-hover bg-white rounded-2xl p-6 text-center shadow-md border border-gray-100" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-14 h-14 bg-gradient-to-br from-accent to-brand-primary rounded-xl flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-bolt text-white text-xl"></i>
+                <!-- Metode 2: Cauter -->
+                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100" data-aos="fade-up" data-aos-delay="100">
+                    <div class="method-img-container h-56 w-full bg-gradient-to-br from-gray-50 to-brand-lighter/30">
+                        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgRNNgJkc6TtfMEk1cgfRAIFV-fJXNxyLv9lb12jmRn_ENSwnLrpGBKmYc07mxJxSuMD4_v0cL6jO7xBZhnaY95m05CO6yFC_xa92c54jVObNosZObV8wWYfNYygoVM9H8oHtgu0umuJaDeTL__GLLa7c3M3m2IFAzxX-1r-Qa7ViueYjlYkinF9PLuhQgQ" 
+                             alt="Metode Cauter" 
+                             class="method-img">
                     </div>
-                    <h3 class="font-bold text-brand-dark">Cauter</h3>
-                    <p class="text-gray-500 text-xs mt-2">Teknologi panas listrik</p>
-                    <button onclick="openModal('modal-cauter')" class="inline-block mt-3 text-accent text-xs font-semibold hover:underline cursor-pointer">Selengkapnya →</button>
+                    <div class="p-6 text-center">
+                        <div class="w-14 h-14 bg-gradient-to-br from-accent to-brand-primary rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-bolt text-white text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-brand-dark text-lg">Thermo Top Sealer</h3>
+                        <p class="text-gray-500 text-sm mt-2">
+                        <button onclick="openModal('modal-price-cauter')" class="mt-4 bg-accent hover:bg-accent/90 text-white font-bold py-2.5 px-5 rounded-full text-sm inline-flex items-center gap-2 transition shadow-md w-full justify-center">
+                            <i class="fas fa-tag"></i> Lihat Detail Harga
+                        </button>
+                    </div>
                 </div>
                 
-                <!-- Metode 3 -->
-                <div class="card-hover bg-white rounded-2xl p-6 text-center shadow-md border border-gray-100" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-14 h-14 bg-gradient-to-br from-accent to-brand-primary rounded-xl flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-compress text-white text-xl"></i>
+                <!-- Metode 3: Klem -->
+                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100" data-aos="fade-up" data-aos-delay="200">
+                    <div class="method-img-container h-56 w-full bg-gradient-to-br from-gray-50 to-brand-lighter/30">
+                        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEinNtg9YLwFAq2xbsx1CIlSvpm-dpACuILsMHCprFGEV8e6tv5pEO3_Pg9egOLOLiQzmI9JjnlnaVYTIPWIWtusrmF_dZOz4_DQDF6Ghd3lQkTD-OLNoM7kHAj8dWsH6Pb-h3BNsqdTmYO-CSmtnEZPYTkSQPFkRo1XEVs0wpCSTJzAt_WyMWPBryfDeQLr" 
+                             alt="Metode Klem" 
+                             class="method-img">
                     </div>
-                    <h3 class="font-bold text-brand-dark">Klem</h3>
-                    <p class="text-gray-500 text-xs mt-2">Tanpa jahitan, cepat</p>
-                    <button onclick="openModal('modal-klem')" class="inline-block mt-3 text-accent text-xs font-semibold hover:underline cursor-pointer">Selengkapnya →</button>
+                    <div class="p-6 text-center">
+                        <div class="w-14 h-14 bg-gradient-to-br from-accent to-brand-primary rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-compress text-white text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-brand-dark text-lg">Bipolar Sealer</h3>
+                        <p class="text-gray-500 text-sm mt-2"></p>
+                        <button onclick="openModal('modal-price-klem')" class="mt-4 bg-accent hover:bg-accent/90 text-white font-bold py-2.5 px-5 rounded-full text-sm inline-flex items-center gap-2 transition shadow-md w-full justify-center">
+                            <i class="fas fa-tag"></i> Lihat Detail Harga
+                        </button>
+                    </div>
                 </div>
                 
-                <!-- Metode 4 -->
-                <div class="card-hover bg-white rounded-2xl p-6 text-center shadow-md border border-gray-100" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-14 h-14 bg-gradient-to-br from-accent to-brand-primary rounded-xl flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-laser text-white text-xl"></i>
+                <!-- Metode 4: Konvensional -->
+                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100" data-aos="fade-up" data-aos-delay="300">
+                    <div class="method-img-container h-56 w-full bg-gradient-to-br from-gray-50 to-brand-lighter/30">
+                        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEjTtm4f6cc8-V36kYrkil3ColBEg8yEjLDbo1C2wSUJfYqKQzUbiLfG1akhZXrAen339XZ1c_mbWkY1AB35VWLB78S7tVP2zQijltp2qCTzYtkVwGfgJIIUNXsDgk3SgS59FCjdtOe1YJOt99Vp4ubcGCDFOwjlgQpgdOfQCqx0Z5hNRPwojptehKJlIaqZ" 
+                             alt="Metode Konvensional" 
+                             class="method-img">
                     </div>
-                    <h3 class="font-bold text-brand-dark">Laser</h3>
-                    <p class="text-gray-500 text-xs mt-2">Presisi tinggi, rapi</p>
-                    <button onclick="openModal('modal-laser')" class="inline-block mt-3 text-accent text-xs font-semibold hover:underline cursor-pointer">Selengkapnya →</button>
+                    <div class="p-6 text-center">
+                        <div class="w-14 h-14 bg-gradient-to-br from-accent to-brand-primary rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-cut text-white text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-brand-dark text-lg">Flash Cauter</h3>
+                        <p class="text-gray-500 text-sm mt-2"></p>
+                        <button onclick="openModal('modal-price-konvensional')" class="mt-4 bg-accent hover:bg-accent/90 text-white font-bold py-2.5 px-5 rounded-full text-sm inline-flex items-center gap-2 transition shadow-md w-full justify-center">
+                            <i class="fas fa-tag"></i> Lihat Detail Harga
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Metode 5: Smart Clamp -->
+                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100" data-aos="fade-up" data-aos-delay="400">
+                    <div class="method-img-container h-56 w-full bg-gradient-to-br from-gray-50 to-brand-lighter/30">
+                        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEjmshBk813iyssopTfuKwdnFSzByV2Bvdi4DFT3AqCJqbsKl_-Ax0suXqtfrteJp4M_71bbsNWxuEv-T0QXUAGgbLldEbteug3f513cXfyLTsQ6_FN3Ym_fUBGmQAvAEwx2j_nsc7-xlts0LSud_z7jf-43bpCvZqbBaPs66JUV9Jvl0cRWOYIzrkd-DXhv" 
+                             alt="Metode Smart Clamp" 
+                             class="method-img">
+                    </div>
+                    <div class="p-6 text-center">
+                        <div class="w-14 h-14 bg-gradient-to-br from-accent to-brand-primary rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-microchip text-white text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-brand-dark text-lg">Klamp</h3>
+                        <p class="text-gray-500 text-sm mt-2"></p>
+                        <button onclick="openModal('modal-price-smartclamp')" class="mt-4 bg-accent hover:bg-accent/90 text-white font-bold py-2.5 px-5 rounded-full text-sm inline-flex items-center gap-2 transition shadow-md w-full justify-center">
+                            <i class="fas fa-tag"></i> Lihat Detail Harga
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Metode 6: Ring -->
+                <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100" data-aos="fade-up" data-aos-delay="500">
+                    <div class="method-img-container h-56 w-full bg-gradient-to-br from-gray-50 to-brand-lighter/30">
+                        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEjsGqZeQpykSwUTTGuqnuhZC0Krn3p_zORhp_-kZ5eHAri-IrnCaWpPta2RQRrehhfPrXiszi3o0GRdWOezGIS1sgt_3DWQTCOWBX1S9c1YYeUN95nr6sKIWIVI00rrNlzSG-lnPJELPcH1NNxor0cHra-SGYBRf5bciE699zhwPRp-IaykyHzyyknCD210" 
+                             alt="Metode Ring" 
+                             class="method-img">
+                    </div>
+                    <div class="p-6 text-center">
+                        <div class="w-14 h-14 bg-gradient-to-br from-accent to-brand-primary rounded-xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-circle-notch text-white text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-brand-dark text-lg">Stapler</h3>
+                        <p class="text-gray-500 text-sm mt-2"></p>
+                        <button onclick="openModal('modal-price-ring')" class="mt-4 bg-accent hover:bg-accent/90 text-white font-bold py-2.5 px-5 rounded-full text-sm inline-flex items-center gap-2 transition shadow-md w-full justify-center">
+                            <i class="fas fa-tag"></i> Lihat Detail Harga
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== MODAL POPUPS UNTUK METODE ==================== -->
-    <!-- Modal Konvensional -->
-    <div id="modal-konvensional" class="modal-overlay fixed inset-0 z-[200] flex items-center justify-center p-5" onclick="closeModalOutside(event, 'modal-konvensional')">
-        <div class="modal-content bg-white rounded-2xl shadow-2xl max-w-lg w-full p-8 relative animate-slide-up" onclick="event.stopPropagation()">
-            <button onclick="closeModal('modal-konvensional')" class="absolute top-4 right-4 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition">
-                <i class="fas fa-times text-gray-500"></i>
+    <!-- ==================== MODAL POPUP UNTUK PAKET HARGA METODE ==================== -->
+    <!-- Modal Harga Laser -->
+    <div id="modal-price-laser" class="modal-overlay fixed inset-0 z-[200] flex items-center justify-center p-5" onclick="closeModalOutside(event, 'modal-price-laser')">
+        <div class="modal-content bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 relative" onclick="event.stopPropagation()">
+            <button onclick="closeModal('modal-price-laser')" class="absolute top-3 right-3 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition">
+                <i class="fas fa-times text-gray-500 text-sm"></i>
             </button>
-            <div class="text-center mb-6">
-                <div class="w-16 h-16 bg-gradient-to-br from-accent to-brand-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <i class="fas fa-cut text-white text-2xl"></i>
-                </div>
-                <h3 class="text-2xl font-extrabold text-brand-dark">Sunat Konvensional</h3>
-            </div>
-            <p class="text-gray-600 leading-relaxed mb-4">Metode sunat klasik yang telah teruji selama bertahun-tahun. Prosedur dilakukan dengan teknik bedah minor menggunakan alat steril dan jahitan halus yang akan larut dengan sendirinya.</p>
-            <div class="space-y-3 text-sm">
-                <div class="flex items-start gap-3"><i class="fas fa-check-circle text-accent mt-1"></i><span class="text-gray-600"><strong>Keunggulan:</strong> Biaya terjangkau, tersedia di semua klinik, hasil permanen.</span></div>
-                <div class="flex items-start gap-3"><i class="fas fa-clock text-accent mt-1"></i><span class="text-gray-600"><strong>Durasi:</strong> 20-30 menit.</span></div>
-                <div class="flex items-start gap-3"><i class="fas fa-heart text-accent mt-1"></i><span class="text-gray-600"><strong>Pemulihan:</strong> 7-10 hari.</span></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Cauter -->
-    <div id="modal-cauter" class="modal-overlay fixed inset-0 z-[200] flex items-center justify-center p-5" onclick="closeModalOutside(event, 'modal-cauter')">
-        <div class="modal-content bg-white rounded-2xl shadow-2xl max-w-lg w-full p-8 relative animate-slide-up" onclick="event.stopPropagation()">
-            <button onclick="closeModal('modal-cauter')" class="absolute top-4 right-4 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition">
-                <i class="fas fa-times text-gray-500"></i>
-            </button>
-            <div class="text-center mb-6">
-                <div class="w-16 h-16 bg-gradient-to-br from-accent to-brand-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <i class="fas fa-bolt text-white text-2xl"></i>
-                </div>
-                <h3 class="text-2xl font-extrabold text-brand-dark">Sunat Cauter (Electrocautery)</h3>
-            </div>
-            <p class="text-gray-600 leading-relaxed mb-4">Metode modern menggunakan alat electrocautery yang memotong kulit sekaligus membekukan pembuluh darah secara bersamaan menggunakan energi panas listrik.</p>
-            <div class="space-y-3 text-sm">
-                <div class="flex items-start gap-3"><i class="fas fa-check-circle text-accent mt-1"></i><span class="text-gray-600"><strong>Keunggulan:</strong> Minim perdarahan, proses lebih cepat, bekas luka lebih rapi.</span></div>
-                <div class="flex items-start gap-3"><i class="fas fa-clock text-accent mt-1"></i><span class="text-gray-600"><strong>Durasi:</strong> 15-25 menit.</span></div>
-                <div class="flex items-start gap-3"><i class="fas fa-heart text-accent mt-1"></i><span class="text-gray-600"><strong>Pemulihan:</strong> 7-10 hari.</span></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Klem -->
-    <div id="modal-klem" class="modal-overlay fixed inset-0 z-[200] flex items-center justify-center p-5" onclick="closeModalOutside(event, 'modal-klem')">
-        <div class="modal-content bg-white rounded-2xl shadow-2xl max-w-lg w-full p-8 relative animate-slide-up" onclick="event.stopPropagation()">
-            <button onclick="closeModal('modal-klem')" class="absolute top-4 right-4 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition">
-                <i class="fas fa-times text-gray-500"></i>
-            </button>
-            <div class="text-center mb-6">
-                <div class="w-16 h-16 bg-gradient-to-br from-accent to-brand-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <i class="fas fa-compress text-white text-2xl"></i>
-                </div>
-                <h3 class="text-2xl font-extrabold text-brand-dark">Sunat Klem (Clamp)</h3>
-            </div>
-            <p class="text-gray-600 leading-relaxed mb-4">Metode sunat modern tanpa jahitan menggunakan alat klem khusus. Kulit yang akan dibuang dijepit dengan klem, sehingga tidak memerlukan jahitan dan bekas luka lebih rapi.</p>
-            <div class="space-y-3 text-sm">
-                <div class="flex items-start gap-3"><i class="fas fa-check-circle text-accent mt-1"></i><span class="text-gray-600"><strong>Keunggulan:</strong> Tanpa jahitan, penyembuhan lebih cepat, nyeri minimal.</span></div>
-                <div class="flex items-start gap-3"><i class="fas fa-clock text-accent mt-1"></i><span class="text-gray-600"><strong>Durasi:</strong> 15-20 menit.</span></div>
-                <div class="flex items-start gap-3"><i class="fas fa-heart text-accent mt-1"></i><span class="text-gray-600"><strong>Pemulihan:</strong> 5-7 hari.</span></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Laser -->
-    <div id="modal-laser" class="modal-overlay fixed inset-0 z-[200] flex items-center justify-center p-5" onclick="closeModalOutside(event, 'modal-laser')">
-        <div class="modal-content bg-white rounded-2xl shadow-2xl max-w-lg w-full p-8 relative animate-slide-up" onclick="event.stopPropagation()">
-            <button onclick="closeModal('modal-laser')" class="absolute top-4 right-4 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition">
-                <i class="fas fa-times text-gray-500"></i>
-            </button>
-            <div class="text-center mb-6">
-                <div class="w-16 h-16 bg-gradient-to-br from-accent to-brand-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <div class="text-center mb-4">
+                <div class="w-16 h-16 bg-gradient-to-br from-accent to-brand-primary rounded-2xl flex items-center justify-center mx-auto mb-3">
                     <i class="fas fa-laser text-white text-2xl"></i>
                 </div>
-                <h3 class="text-2xl font-extrabold text-brand-dark">Sunat Laser</h3>
+                <h3 class="text-xl font-extrabold text-brand-dark">PAKET BASIC LASER</h3>
             </div>
-            <p class="text-gray-600 leading-relaxed mb-4">Metode sunat tercanggih menggunakan teknologi sinar laser presisi tinggi. Sinar laser memotong jaringan sekaligus membekukan pembuluh darah mikro, menghasilkan potongan yang sangat rapi dan steril.</p>
-            <div class="space-y-3 text-sm">
-                <div class="flex items-start gap-3"><i class="fas fa-check-circle text-accent mt-1"></i><span class="text-gray-600"><strong>Keunggulan:</strong> Presisi tinggi, minim perdarahan, bekas luka paling rapi, risiko infeksi sangat rendah.</span></div>
-                <div class="flex items-start gap-3"><i class="fas fa-clock text-accent mt-1"></i><span class="text-gray-600"><strong>Durasi:</strong> 10-20 menit.</span></div>
-                <div class="flex items-start gap-3"><i class="fas fa-heart text-accent mt-1"></i><span class="text-gray-600"><strong>Pemulihan:</strong> 5-7 hari.</span></div>
+            <div class="space-y-2 text-sm">
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>METODE LASER JAHIT</span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Bius Lokal Suntik</span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Obat</span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Celana Dalam Sunat</span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Piagam Sunat</span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Kontrol Gratis</span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Hadiah Hotwheels</span></div>
             </div>
+            <div class="mt-4 p-3 bg-brand-lighter rounded-xl text-center">
+                <p class="text-gray-500 line-through text-sm">Rp 1.200.000,-</p>
+                <p class="text-2xl font-bold text-accent">💰 Diskon 200rb jadi Rp. 1.000.000,-</p>
+            </div>
+            <a href="https://wa.me/6282254714341?text=Halo%20Top%20Sunat%20Borneo%2C%20saya%20tertarik%20dengan%20paket%20BASIC%20LASER" target="_blank" class="mt-5 btn-shine bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-full text-sm inline-flex items-center justify-center gap-2 transition w-full">
+                <i class="fab fa-whatsapp text-lg"></i> Hubungi Kami
+            </a>
+        </div>
+    </div>
+
+    <!-- Modal Harga Cauter -->
+    <div id="modal-price-cauter" class="modal-overlay fixed inset-0 z-[200] flex items-center justify-center p-5" onclick="closeModalOutside(event, 'modal-price-cauter')">
+        <div class="modal-content bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 relative" onclick="event.stopPropagation()">
+            <button onclick="closeModal('modal-price-cauter')" class="absolute top-3 right-3 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition">
+                <i class="fas fa-times text-gray-500 text-sm"></i>
+            </button>
+            <div class="text-center mb-4">
+                <div class="w-16 h-16 bg-gradient-to-br from-accent to-brand-primary rounded-2xl flex items-center justify-center mx-auto mb-3">
+                    <i class="fas fa-bolt text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-extrabold text-brand-dark">PAKET SUNAT THERMO TOP SEALER</h3>
+            </div>
+            <div class="space-y-2 text-sm">
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Metode LASER + LEM</span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>1 Jahitan</span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span> Bius Tanpa Jarum Suntik </span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Obat </span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Celana Dalam Sunat </span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Piagam Sunat </span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Hadiah mobil RC/hotwheel</span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>TANPA PERBAN BISA LANGSUNG AKTIFITAS/span></div>
+            </div>
+            <div class="mt-4 p-3 bg-brand-lighter rounded-xl text-center">
+                <p class="text-gray-500 line-through text-sm">Rp 2.000.000,-</p>
+                <p class="text-2xl font-bold text-accent">💰 Diskon 250rb jadi Rp. 1.750.000,-</p>
+            </div>
+            <a href="https://wa.me/6282254714341?text=Halo%20Top%20Sunat%20Borneo%2C%20saya%20tertarik%20dengan%20paket%20BASIC%20CAUTER" target="_blank" class="mt-5 btn-shine bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-full text-sm inline-flex items-center justify-center gap-2 transition w-full">
+                <i class="fab fa-whatsapp text-lg"></i> Hubungi Kami
+            </a>
+        </div>
+    </div>
+
+    <!-- Modal Harga Klem -->
+    <div id="modal-price-klem" class="modal-overlay fixed inset-0 z-[200] flex items-center justify-center p-5" onclick="closeModalOutside(event, 'modal-price-klem')">
+        <div class="modal-content bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 relative" onclick="event.stopPropagation()">
+            <button onclick="closeModal('modal-price-klem')" class="absolute top-3 right-3 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition">
+                <i class="fas fa-times text-gray-500 text-sm"></i>
+            </button>
+            <div class="text-center mb-4">
+                <div class="w-16 h-16 bg-gradient-to-br from-accent to-brand-primary rounded-2xl flex items-center justify-center mx-auto mb-3">
+                    <i class="fas fa-compress text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-extrabold text-brand-dark">PAKET SUNAT BIPOLAR SEALER</h3>
+            </div>
+            <div class="space-y-2 text-sm">
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Metode Cetak Lem ESU (elektrosurgical.  unit)</span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Bius Tanpa Jarum Suntik </span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Obat</span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Celana Dalam Sunat</span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Piagam Sunat</span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Hadiah Heli RC </span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>TANPA JAHIT TANPA PERBAN BISA LANGSUNG AKTIFITAS</span></div>
+            </div>
+            <div class="mt-4 p-3 bg-brand-lighter rounded-xl text-center">
+                <p class="text-gray-500 line-through text-sm">Rp 2.500.000,-</p>
+                <p class="text-2xl font-bold text-accent">💰 Diskon 500rb jadi Rp. 2.000.000,-</p>
+            </div>
+            <a href="https://wa.me/6282254714341?text=Halo%20Top%20Sunat%20Borneo%2C%20saya%20tertarik%20dengan%20paket%20KLEM" target="_blank" class="mt-5 btn-shine bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-full text-sm inline-flex items-center justify-center gap-2 transition w-full">
+                <i class="fab fa-whatsapp text-lg"></i> Hubungi Kami
+            </a>
+        </div>
+    </div>
+
+    <!-- Modal Harga Konvensional -->
+    <div id="modal-price-konvensional" class="modal-overlay fixed inset-0 z-[200] flex items-center justify-center p-5" onclick="closeModalOutside(event, 'modal-price-konvensional')">
+        <div class="modal-content bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 relative" onclick="event.stopPropagation()">
+            <button onclick="closeModal('modal-price-konvensional')" class="absolute top-3 right-3 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition">
+                <i class="fas fa-times text-gray-500 text-sm"></i>
+            </button>
+            <div class="text-center mb-4">
+                <div class="w-16 h-16 bg-gradient-to-br from-accent to-brand-primary rounded-2xl flex items-center justify-center mx-auto mb-3">
+                    <i class="fas fa-cut text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-extrabold text-brand-dark">Flash Cauter</h3>
+            </div>
+            <div class="space-y-2 text-sm">
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>METODE KONVENSIONAL JAHIT</span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Bius Lokal Suntik</span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Obat</span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Celana Dalam Sunat</span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Piagam Sunat</span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Kontrol Gratis</span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Hadiah Hotwheels</span></div>
+            </div>
+            <div class="mt-4 p-3 bg-brand-lighter rounded-xl text-center">
+                <p class="text-gray-500 line-through text-sm">Rp 1.200.000,-</p>
+                <p class="text-2xl font-bold text-accent">💰 Diskon 200rb jadi Rp. 1.000.000,-</p>
+            </div>
+            <a href="https://wa.me/6282254714341?text=Halo%20Top%20Sunat%20Borneo%2C%20saya%20tertarik%20dengan%20paket%20KONVENSIONAL" target="_blank" class="mt-5 btn-shine bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-full text-sm inline-flex items-center justify-center gap-2 transition w-full">
+                <i class="fab fa-whatsapp text-lg"></i> Hubungi Kami
+            </a>
+        </div>
+    </div>
+
+    <!-- Modal Harga Smart Clamp -->
+    <div id="modal-price-smartclamp" class="modal-overlay fixed inset-0 z-[200] flex items-center justify-center p-5" onclick="closeModalOutside(event, 'modal-price-smartclamp')">
+        <div class="modal-content bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 relative" onclick="event.stopPropagation()">
+            <button onclick="closeModal('modal-price-smartclamp')" class="absolute top-3 right-3 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition">
+                <i class="fas fa-times text-gray-500 text-sm"></i>
+            </button>
+            <div class="text-center mb-4">
+                <div class="w-16 h-16 bg-gradient-to-br from-accent to-brand-primary rounded-2xl flex items-center justify-center mx-auto mb-3">
+                    <i class="fas fa-microchip text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-extrabold text-brand-dark">PAKET MODERN KLAMP</h3>
+            </div>
+            <div class="space-y-2 text-sm">
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Tanpa Jahit Perban</span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Bius Tanpa Jarum Suntik </span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Obat</span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Celana Dalam Sunat</span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Piagam Sunat</span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Kontrol Gratis</span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Hadiah Langsung Hot Wheel/mobil RC</span></div>
+            </div>
+            <div class="mt-4 p-3 bg-brand-lighter rounded-xl text-center">
+                <p class="text-gray-500 line-through text-sm">Rp 1.700.000,-</p>
+                <p class="text-2xl font-bold text-accent">💰 Diskon 200rb jadi Rp. 1.500.000,-</p>
+            </div>
+            <a href="https://wa.me/6282254714341?text=Halo%20Top%20Sunat%20Borneo%2C%20saya%20tertarik%20dengan%20paket%20SMART%20CLAMP" target="_blank" class="mt-5 btn-shine bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-full text-sm inline-flex items-center justify-center gap-2 transition w-full">
+                <i class="fab fa-whatsapp text-lg"></i> Hubungi Kami
+            </a>
+        </div>
+    </div>
+
+    <!-- Modal Harga Ring -->
+    <div id="modal-price-ring" class="modal-overlay fixed inset-0 z-[200] flex items-center justify-center p-5" onclick="closeModalOutside(event, 'modal-price-ring')">
+        <div class="modal-content bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 relative" onclick="event.stopPropagation()">
+            <button onclick="closeModal('modal-price-ring')" class="absolute top-3 right-3 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition">
+                <i class="fas fa-times text-gray-500 text-sm"></i>
+            </button>
+            <div class="text-center mb-4">
+                <div class="w-16 h-16 bg-gradient-to-br from-accent to-brand-primary rounded-2xl flex items-center justify-center mx-auto mb-3">
+                    <i class="fas fa-circle-notch text-white text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-extrabold text-brand-dark">PAKET PREMIUM STAPLER</h3>
+            </div>
+            <div class="space-y-2 text-sm">
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Metode Canggih Alat Stapler </span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span> Bius  Tanpa Jarum Suntik </span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Obat</span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Celana Dalam Sunat</span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Piagam Sunat</span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Hadiah Heli RC/Mobil RC</span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>TANPA JAHIT  BISA LANGSUNG AKTIFITAS</span></div>
+            </div>
+            <div class="mt-4 p-3 bg-brand-lighter rounded-xl text-center">
+                <p class="text-gray-500 line-through text-sm">Rp 3.000.000,-</p>
+                <p class="text-2xl font-bold text-accent">💰 Diskon 300rb jadi Rp. 2.700.000,-</p>
+            </div>
+            <a href="https://wa.me/6282254714341?text=Halo%20Top%20Sunat%20Borneo%2C%20saya%20tertarik%20dengan%20paket%20RING" target="_blank" class="mt-5 btn-shine bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-full text-sm inline-flex items-center justify-center gap-2 transition w-full">
+                <i class="fab fa-whatsapp text-lg"></i> Hubungi Kami
+            </a>
         </div>
     </div>
 
