@@ -111,10 +111,57 @@
         .card-hover { transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
         .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 35px -12px rgba(0,0,0,0.2); }
         
+        /* Floating Buttons Container */
+        .floating-buttons {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
         /* Floating WA */
-        .wa-float { animation: waPulse 1.8s infinite; z-index: 100; transition: transform 0.3s; }
-        .wa-float:hover { transform: scale(1.12); animation: none; }
-        @keyframes waPulse { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { box-shadow: 0 0 0 22px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+        .wa-float { 
+            animation: waPulse 1.8s infinite;
+            transition: transform 0.3s, box-shadow 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #25D366;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+        }
+        .wa-float:hover { transform: scale(1.12); animation: none; background-color: #20b85a; }
+        
+        /* Floating Maps */
+        .maps-float {
+            transition: transform 0.3s, box-shadow 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #FFFFFF;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+            overflow: hidden;
+        }
+        .maps-float img {
+            width: 70%;
+            height: 70%;
+            object-fit: contain;
+        }
+        .maps-float:hover { transform: scale(1.12); box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
+        
+        @keyframes waPulse { 
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 
+            70% { box-shadow: 0 0 0 22px rgba(37, 211, 102, 0); } 
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } 
+        }
         
         /* CTA Button Shine */
         .btn-shine { position: relative; overflow: hidden; }
@@ -191,6 +238,22 @@
             height: 100%;
             object-fit: contain;
             background-color: #f0f9fa;
+        }
+        
+        /* Responsive untuk floating buttons di mobile */
+        @media (max-width: 640px) {
+            .floating-buttons {
+                bottom: 20px;
+                right: 20px;
+                gap: 12px;
+            }
+            .wa-float, .maps-float {
+                width: 52px;
+                height: 52px;
+            }
+            .wa-float i {
+                font-size: 24px;
+            }
         }
     </style>
 </head>
@@ -625,7 +688,7 @@
                 <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Celana Dalam Sunat </span></div>
                 <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Piagam Sunat </span></div>
                 <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Hadiah mobil RC/hotwheel</span></div>
-                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>TANPA PERBAN BISA LANGSUNG AKTIFITAS/span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>TANPA PERBAN BISA LANGSUNG AKTIFITAS</span></div>
             </div>
             <div class="mt-4 p-3 bg-brand-lighter rounded-xl text-center">
                 <p class="text-gray-500 line-through text-sm">Rp 2.000.000,-</p>
@@ -650,7 +713,7 @@
                 <h3 class="text-xl font-extrabold text-brand-dark">PAKET SUNAT BIPOLAR SEALER</h3>
             </div>
             <div class="space-y-2 text-sm">
-                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Metode Cetak Lem ESU (elektrosurgical.  unit)</span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Metode Cetak Lem ESU (elektrosurgical. unit)</span></div>
                 <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Bius Tanpa Jarum Suntik </span></div>
                 <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Obat</span></div>
                 <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Celana Dalam Sunat</span></div>
@@ -744,12 +807,12 @@
             </div>
             <div class="space-y-2 text-sm">
                 <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Metode Canggih Alat Stapler </span></div>
-                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span> Bius  Tanpa Jarum Suntik </span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span> Bius  Tanpa Jarum Suntik </span></div>
                 <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Obat</span></div>
                 <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Celana Dalam Sunat</span></div>
                 <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Piagam Sunat</span></div>
                 <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>Hadiah Heli RC/Mobil RC</span></div>
-                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>TANPA JAHIT  BISA LANGSUNG AKTIFITAS</span></div>
+                <div class="flex items-start gap-2"><i class="fas fa-check-circle text-accent text-sm mt-0.5"></i><span>TANPA JAHIT  BISA LANGSUNG AKTIFITAS</span></div>
             </div>
             <div class="mt-4 p-3 bg-brand-lighter rounded-xl text-center">
                 <p class="text-gray-500 line-through text-sm">Rp 3.000.000,-</p>
@@ -1287,10 +1350,25 @@
         </div>
     </footer>
 
-    <!-- ==================== FLOATING WHATSAPP ==================== -->
-    <a href="https://wa.me/6282254714341?text=Halo%20Top%20Sunat%20Borneo%2C%20saya%20mau%20tanya." target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white rounded-full p-5 shadow-2xl wa-float flex items-center justify-center" aria-label="Chat WhatsApp">
-        <i class="fab fa-whatsapp text-3xl"></i>
-    </a>
+    <!-- ==================== FLOATING BUTTONS (MAPS & WA) ==================== -->
+    <div class="floating-buttons">
+        <!-- Tombol Google Maps dengan icon gambar -->
+        <a href="https://www.google.com/maps/place/Top+Sunat+Borneo+Sepinggan/@-1.2512988,116.9250184,17z/data=!4m6!3m5!1s0x2df145aa3fa9a407:0x7cdac3c72f4c44fd!8m2!3d-1.2512988!4d116.9275933!16s%2Fg%2F11y8x5bq7m?entry=ttu" 
+           target="_blank" 
+           class="maps-float" 
+           aria-label="Buka Google Maps">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Google_Maps_icon_%282020%29.svg/1920px-Google_Maps_icon_%282020%29.svg.png" 
+                 alt="Google Maps Icon">
+        </a>
+        
+        <!-- Tombol WhatsApp -->
+        <a href="https://wa.me/6282254714341?text=Halo%20Top%20Sunat%20Borneo%2C%20saya%20mau%20tanya." 
+           target="_blank" 
+           class="wa-float" 
+           aria-label="Chat WhatsApp">
+            <i class="fab fa-whatsapp text-white text-3xl"></i>
+        </a>
+    </div>
 
     <!-- ==================== SCRIPTS ==================== -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
